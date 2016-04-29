@@ -5,31 +5,34 @@
 		<title>Wikipraktika | Taschenrechner - tragbare, handliche elektronische Rechenmaschine</title>
 
 		<!-- TODO: author, publisher, description, bookmark icon -->
-
-		<link rel="stylesheet" type="text/css" href="./styles/styles.css">
+		<meta name="Author" content="Silvan Adrian, Fabian Binna, Pascal Kistler"/>
+		<meta name="Publisher" content="Silvan Adrian, Fabian Binna, Pascal Kistler"/>
+		<meta name="Description" content="Taschenrechner - tragbare, handliche elektronische Rechenmaschine"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	</head>
 	<body>
-		<header>
-			<!-- TODO -->
+        <section class="container">
+            <header>
+                <!-- TODO -->
 
-			<h1>Wikipraktika</h1>
-		</header>
+                <h1>Wikipraktika</h1>
+            </header>
 
-		<!-- TODO navigation-->
+            <!-- TODO navigation-->
 
+            <main>
+                <!-- Schriftgrössenwechsler: optionale Aufgabe -->
+                <form id="font-size-form">
+                    <label for="font-slider">Schriftgrösse</label>
+                    <input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
+                           id="font-slider" />
+                    <output name="font-size" id="font-size">1</output>
+                </form>
 
-		<main>
-			<!-- Schriftgrössenwechsler: optionale Aufgabe -->
-			<form id="font-size-form">
-				<label for="font-slider">Schriftgrösse</label>
-				<input type="range" min="8" max="20" step="1" value="10" title="1" name="font-slider"
-					   id="font-slider" />
-				<output name="font-size" id="font-size">1</output>
-			</form>
+                <!-- TODO -->
+            </main>
 
-			<!-- TODO -->
-		</main>
-
-		<!-- TODO -->
+            <!-- TODO -->
+        </section>
 	</body>
 </html>
