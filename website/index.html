@@ -20,12 +20,8 @@
             </header>
 
             <!-- TODO navigation-->
-
-            <main>
-
-                <!-- TODO -->
+            <h2 id="navigation">Navigation</h2>
             <nav>
-                <h2>Navigation</h2>
                 <ul>
                     <li><a href="/de/">Hauptseite</a></li>
                     <li><a href="/de/topics/">Themenportale</a></li>
@@ -49,13 +45,15 @@
                     </li>
                     <li>In andern Sprachen
                         <ul>
-                            <li><a href="/it/articles/calculator">Italiano</a></li>
-                            <li><a href="/fr/articles/calculator">Francais</a></li>
-                            <li><a href="/en/articles/calculator">English</a></li>
+                            <li><a href="/it/articles/calculator" hreflang="it">Italiano</a></li>
+                            <li><a href="/fr/articles/calculator" hreflang="fr">Francais</a></li>
+                            <li><a href="/en/articles/calculator" hreflang="en">English</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
+            <main>
+                <!-- TODO -->
                 <!-- Schriftgrössenwechsler: optionale Aufgabe -->
                 <form id="font-size-form">
                     <label for="font-slider">Schriftgrösse</label>
@@ -66,7 +64,7 @@
                 <article>
                     <!-- Taschenrechner -->
                     <h2>Taschenrechner</h2>
-                    <h2>1 Taschenrechner</h2>
+                    <h2 id="taschenrechner">Taschenrechner</h2>
                     <p>
                         Ein Taschenrechner ist eine tragbare, handliche elektronische Rechenmaschine,
                         mit deren Hilfe numerische Berechnungen ausgeführt werden können.
@@ -78,7 +76,12 @@
                         Praktisch alle heutigen Taschenrechner verwenden elektronische Integrierte Schaltungen und
                         LC-Displays als Anzeige und werden von einer Batterie oder Solarzelle mit Strom versorgt.
                     </p>
-
+                    <figure>
+                        <img src="assets/images/900px-SCM_Marchant_calculator.jpg" alt="1960s SCM Marchant calculator" />
+                        <figcaption>By Bilby (commons.wikimedia.org/wiki/User:Bilby) - Own work, CC BY 3.0 (http://creativecommons.org/licenses/by/3.0),
+                            https://commons.wikimedia.org/w/index.php?curid=10980797</figcaption>
+                    </figure>
+                    <section class="history">
                     <h3>Geschichte</h3>
                     <p>
                         Bereits vor der Einführung der elektronischen Taschenrechner gab es einen Bedarf nach
@@ -93,7 +96,6 @@
                         Integrationsgrad der Schaltungstechnik noch geringer war und die deshalb größere Dimensionen
                         aufwiesen.
                     </p>
-
                     <p>
                         Der erste elektronische, tatsächlich handflächengroße Taschenrechner wurde 1967 von Texas
                         Instruments entwickelt.[1] Ein 1,5 kg schwerer Prototyp dieses ersten Taschenrechners ist
@@ -115,6 +117,7 @@
                         Er hatte vier Funktionen und ein achtstelliges rotes LED-Display. Verkauft wurde er für 240 US$.
                         Bowmar musste 1976 schließen.
                     </p>
+                    </section>
 
                     <p>
                         1972 erschien mit dem HP-35 von Hewlett-Packard der erste technisch-wissenschaftliche
@@ -150,81 +153,142 @@
                     <p>
                         Source Wikipedia: de.wikipedia.org/wiki/Taschenrechner (https://de.wikipedia.org/wiki/Taschenrechner)
                     </p>
+
                     <!-- Taschenrechner -->
                     <!-- Demonstration -->
-                    <h2>Demonstration</h2>
+                    <h2 id="demo">Demonstration</h2>
                     <iframe src="calculator/index.html"></iframe>
                     Casino Mini von 1972
                     <!-- Demonstration -->
                     <!-- Bedienung des TI-Nspire CX CAS -->
-                    <h2>3 Bedienung des TI-Nspire CX CAS</h2>
-                    <h2 style="color:red;">Add Video here</h2>
-                    ../media/TI-Nspire CX CAS 3D Model.mp4
-                    ../media/TI-Nspire CX CAS 3D Model.webm
-                    Thumbnail: ../media/ti-nspire-cx-cas.png
-                    Untertitel English: ../media/ti-nspire-subtitles.en.vtt
-                    TI-Nspire CX CAS Demonstration
+                    <h2 id="cas">Bedienung des TI-Nspire CX CAS</h2>
+                    <figure>
+                        <video controls width="640" height="400" role="application" poster="assets/images/ti-nspire-cx-cas.png">
+                            <source src="assets/TI-Nspire_CX_CAS_3D_Model.mp4" type="video/mp4">
+                            <source src="assets/TI-Nspire_CX_CAS_3D_Model.webm" type="video/webm">
+                            <track src="assets/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en"  label="Untertitel English" default />
+
+                        </video>
+                        <figcaption>
+                            TI-Nspire CX CAS Demonstration
+                        </figcaption>
+                    </figure>
+
+                    <p>Von TheConnerdy, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
+                    <a href="https://www.youtube.com/watch?v=6gKkz4VkSgk">via Youtube</a></p>
+                    <footer>
+                        <small>Zuletzt geändert von Philipp Graf</small>
+                        <time datetime="2016-02-11 12:45">Donnerstag, 11. Februar 2016, 12:45</time>
+                    </footer>
+
+
                     <!-- Bedienung des TI-Nspire CX CAS -->
                     <!-- Taschenrechnervarianten -->
-                    <h2>4 Taschenrechnervarianten</h2>
-                    Einfach
-                    Grundrechenarten, Prozentrechnung
-                    Finanzwirtschaft
-                    Zinsrechnung, …
-                    zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988
-                    Boolesche Rechnungen
-                    Rechnen mit Dual-, Oktal- und Hexadezimalzahlen, z. B. TI Programmer)
-                    Wissenschaftlich
-                    Winkelfunktionen, Logarithmus, mathematische Statistik, …
-                    zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte
-                    Programmierbarer Taschenrechner
-                    Grafikfähiger Taschenrechner
-                    Funktions-/Kurvendarstellung
-                    ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)
-                    1989 bis heute die HP-48-49-Reihe
-                    ab 1993 der TI-82 und seine Nachfolger
-                    aktuell der TI-84 Plus und TI-Nspire
-                    Grafikrechner sind typischerweise auch programmierbar.
-                    Computeralgebra-Rechner
-                    grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern
-                    erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
+                    <h2 id="variation">Taschenrechnervarianten</h2>
+                    <h3>Einfach</h3>
+                    <ul>
+                        <li>Grundrechenarten, Prozentrechnung</li>
+                    </ul>
+                    <h3>Finanzwirtschaft</h3>
+                    <ul>
+                        <li>Zinsrechnung, …</li>
+                        <li>zum Beispiel der „Klassiker“ HP-12C (hergestellt seit 1981), HP 17 B (II) (hergestellt seit 1988</li>
+                    </ul>
+                    <h3>Boolesche Rechnungen</h3>
+                    <ul>
+                        <li>Rechnen mit Dual-, Oktal- und Hexadezimalzahlen, z. B. TI Programmer)</li>
+                    </ul>
+                    <h3>Wissenschaftlich</h3>
+                    <ul>
+                        <li>Winkelfunktionen, Logarithmus, mathematische Statistik, …</li>
+                        <li>zum Beispiel TI-30 (seit 1976 dieselbe Typbezeichnung für intern völlig unterschiedliche Geräte</li>
+                    </ul>
+                    <h3>Programmierbarer Taschenrechner</h3>
+                    <h3>Grafikfähiger Taschenrechner</h3>
+                    <ul>
+                        <li>Funktions-/Kurvendarstellung</li>
+                        <li>ab 1985 Geräte von Casio (fx-Serie, aktuelles Modell fx 9860G SD)</li>
+                        <li>1989 bis heute die HP-48-49-Reihe</li>
+                        <li>ab 1993 der TI-82 und seine Nachfolger</li>
+                        <li>aktuell der TI-84 Plus und TI-Nspire</li>
+                        <li>Grafikrechner sind typischerweise auch programmierbar.</li>
+                    </ul>
+                    <h3>Computeralgebra-Rechner</h3>
+                    <ul>
+                        <li>grafikfähige Taschenrechner mit eingebautem Computeralgebra-Kern</li>
+                        <li>erstes verbreitetes Gerät war der HP-48 von Hewlett-Packard (ab 1989),
                     spätere Geräte zum Beispiel TI-92(+) (ab 1995), TI-89 (ab
                     1998) und Voyage 200 (ab 2002), TI-Nspire CAS (ab 2007)
                     von Texas Instruments, ClassPad 300 von Casio, HP 49g+ von
-                    Hewlett-Packard.
+                    Hewlett-Packard.</li>
+                    </ul>
 
-                    Taschenrechnervarianten, Source Wikipedia: de.wikipedia.org/wiki/Taschenrechner (https://de.wikipedia
-                    .org/wiki/Taschenrechner)
+                    <p>Taschenrechnervarianten, Source Wikipedia: <a href="https://de.wikipedia.org/wiki/Taschenrechner">
+                        de.wikipedia.org/wiki/Taschenrechner</a></p>
 
-                    <small>Zuletzt geändert von Gabriela Kant</small>
-                    Donnerstag, 11. Februar 2016, 10:09
+                    <footer>
+                        <small>Zuletzt geändert von Gabriela Kant</small>
+                        <time datetime="2016-02-11 10:09">Donnerstag, 11. Februar 2016, 10:09</time>
+                    </footer>
                     <!-- Taschenrechnervarianten -->
                     <!-- Zeitgewinn -->
-                    <h2>5 Zeitgewinn</h2>
+                    <h2 id="gewinn">Zeitgewinn</h2>
                     Zeitgewinn durch Benutzung eines Taschenrechners
 
-                    2-Stellen	3-Stellen	4-Stellen
-                    Addition / Subtraktion		4			8			20
-                    Multiplikation				15			45			240
-                    Division											210
-                    Modulo						5			20			65
-                    Quersumme							1				2
-                    Wurzelziehen				Kaum machbar von Hand
-                    Potenzieren					25			75			550
-
-                    <img src="assets/images/zeitgewinn.svg" alt="Zeitgewinn"/>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th><th>2-Stellen</th><th>3-Stellen</th><th>4-Stellen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Addition / Subtraktion</th><td>4</td><td>8</td><td>20</td>
+                            </tr>
+                            <tr>
+                                <th>Multiplikation</th><td>15</td><td>45</td><td>240</td>
+                            </tr>
+                            <tr>
+                                <th>Division</th><td></td><td></td><td>210</td>
+                            </tr>
+                            <tr>
+                                <th>Modulo</th><td>5</td><td>20</td><td>65</td>
+                            </tr>
+                            <tr>
+                                <th>Quersumme</th><td></td><td>1</td><td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Wurzelziehen</th><td colspan="3">Kaum machbar von Hand</td>
+                            </tr>
+                            <tr>
+                                <th>Potenzieren</th><td>25</td><td>75</td><td>550</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <figure>
+                        <img src="assets/images/zeitgewinn.svg" alt="Zeitgewinn"/>
+                    </figure>
+                    <footer>
+                        <small>Zuletzt geändert von Leandra Gross</small>
+                        <time datetime="2016-02-29 13:02">Freitag, 29. Februar 2016, 13:02</time>
+                    </footer>
 
                     <!-- Zeitgewinn -->
                     <!-- iPhone calculator tricks -->
-                    <h2>6 iPhone calculator tricks</h2>
-                    https://www.youtube.com/embed/a7rcVgb41-0
-                    iPhone Calculator Tricks  on YouTube: youtube.com/watch?v=a7rcVgb41-0 (https://www.youtube.com/watch?v=a7rcVgb41-0)
+                    <h2 id="tricks">iPhone calculator tricks</h2>
+                    <iframe src="https://www.youtube.com/embed/a7rcVgb41-0" width="600">
 
-                    Zuletzt geändert von Paul Sarner
-                    Donnerstag, 10. Februar 2016, 18:38
+                    </iframe>
+
+                    <p>iPhone Calculator Tricks  on YouTube: <a href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a></p>
+                    <footer>
+                        <small>Zuletzt geändert von Paul Sarner</small>
+                        <time datetime="2016-02-10 18:38">Donnerstag, 10. Februar 2016, 18:38</time>
+                    </footer>
+
                     <!-- iPhone calculator tricks -->
                     <!-- Die besten und schlechtesten Taschenrechner -->
-                    <h2>7 Die besten und schlechtesten Taschenrechner</h2>
+                    <h2 id="worst">Die besten und schlechtesten Taschenrechner</h2>
 
                     <p>In einer 2014 durchgeführten Benutzerbefragung schnitten die Modelle von Casino am Besten ab:</p>
                     <ol>
@@ -239,22 +303,34 @@
                         <li>HG Calc++</li>
                         <li>HG GO-ON</li>
                     </ol>
-                    Zuletzt geändert von Petra SummerDonnerstag, 11. Februar 2016, 14:13
+                    <footer>
+                        <small>Zuletzt geändert von Petra Summer</small>
+                        <time datetime="2016-02-11 14:13">Donnerstag, 11. Februar 2016, 14:13</time>
+                    </footer>
+
                     <!-- Die besten und schlechtesten Taschenrechner -->
                     <!-- Taschenrechner suchen nach Modell -->
-                    <h2>8 Taschenrechner suchen nach Modell</h2>
-                    [                     ]
-                    Mexico Instrument TI 30
-                    Mexico Instrument TI 32
-                    Mexico Instrument D*D
-                    Casino UX5
-                    Casino TZZ
-                    Casino Basic
-                    HG Calc++
-                    HG Productive
-                    HG GO-ON
+                    <h2 id="model">Taschenrechner suchen nach Modell</h2>
+                    <section>
+                        <form>
+                            <datalist id="search-suggestions">
+                                <option value="Mexico Instrument TI 30">Mexico Instrument TI 30</option>
+                                <option value="Mexico Instrument TI 32">Mexico Instrument TI 32</option>
+                                <option value="Mexico Instrument D*D">Mexico Instrument D*D</option>
+                                <option value="Casino UX5">Casino UX5</option>
+                                <option value="Casino TZZ">Casino TZZ</option>
+                                <option value="Casino Basic">Casino Basic</option>
+                                <option value="HG Calc++">HG Calc++</option>
+                                <option value="HG Productive">HG Productive</option>
+                                <option value="HG GO-ON">HG GO-ON</option>
+                            </datalist>
+                            <input type="search" name="search-term" list="search-suggestions" id="search-term" aria-label="search term" />
+                            <button type="submit">
+                                Search
+                            </button>
+                        </form>
+                    </section>
 
-                    [search]
 
                     <h2>Neuen Autor registrieren</h2>
 
@@ -282,17 +358,21 @@
                     [Account anlegen]
                     [Eingaben zurücksetzen]
                     <!-- Taschenrechner suchen nach Modell -->
-                    <!-- Footer -->
-                    Bahnhofstrasse 42,
-                    8000 Zürich
 
-                    055 444 33 22
-                    info@wikipraktika.com
-
-                    Alle Inhalte von Wikipraktika stehen unter der |https://i.creativecommons.org/l/by-sa/4.0/88x31.png|
-                    (http://creativecommons.org/licenses/by-sa/4.0/) Creative Commons Attribution-ShareAlike 4.0 International License
-                    (http://creativecommons.org/licenses/by-sa/4.0/) und dürfen nur mit Nennung des Autors weiterverwendet werden.
                     <!-- Footer -->
+                    <section class="footer">
+                        <address>
+                            Bahnhofstrasse 42, 8000 Zürich
+                         </address>
+
+                        <p><a href="tel:0554443322">055 444 33 22</a> <a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a></p>
+
+                        <p>Alle Inhalte von Wikipraktika stehen unter der | <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+                            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons"></a>|
+                        <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+                         und dürfen nur mit Nennung des Autors weiterverwendet werden.</p>
+                    </section>
+                        <!-- Footer -->
                 </article>
             </main>
 
