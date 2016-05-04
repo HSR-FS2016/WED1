@@ -6,8 +6,8 @@
   "devDependencies": {
     "browser-sync": "^2.12.5",
     "gulp": "^3.9.1",
-    "gulp-w3cjs": "^1.2.0",
-    "gulp-watch": "^4.3.5"
+    "gulp-jade": "^1.1.0",
+    "gulp-w3cjs": "^1.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

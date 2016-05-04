@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var w3cjs = require('gulp-w3cjs');
 var jade = require('gulp-jade');
-var watch = require('gulp-watch');
+var notify = require("gulp-notify");
 var filesToMove = [
         './website/assets/**/*.*',
 				'./website/calculator/**/*.*'
