@@ -7,7 +7,6 @@ var filesToMove = [
         './website/assets/**/*.*',
 				'./website/calculator/**/*.*'
     ];
-var clean = require('gulp-clean');
 
 gulp.task('validate-html', function () {
 	gulp.src('dist/**/*.html')
