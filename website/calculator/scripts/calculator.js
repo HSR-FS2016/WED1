@@ -1,9 +1,15 @@
 /**
  * core
  */
-var r1;
-var r2;
+var register2 = "";
+var register1 = "";
+var operation = "";
 
+function setOperation(_operation) {
+   operation = _operation;
+   register2 = register1;
+   register1 = "";
+}
 
 
 /**
@@ -11,30 +17,31 @@ var r2;
  */
 
 function buttonNumClickHandler (event) {
-   document.getElementById('output').innerHTML = event.target.id.toString();
+   $("#input").append(event.target.value);
+   register1 = $("#input").text(); //toNum
 }
 
 function buttonOpClickHandler (event) {
-   document.getElementById('output').innerHTML = event.target.id.toString();
+   setOperation(event.target.value);
+   render();
 }
 
 function buttonComClickHandler (event) {
-   document.getElementById('output').innerHTML = event.target.id.toString();
-}
-
-function addClickHandlerToButton(handler, buttonClass) {
-   var buttons = document.getElementsByClassName(buttonClass);
-   var i;
-   for (i = 0; i < buttons.length; i++) {
-      buttons[i].onclick = handler;
-   }
-}
-
-
-window.addEventListener('load', function() {
    
-   addClickHandlerToButton(buttonNumClickHandler, 'number');
-   addClickHandlerToButton(buttonOpClickHandler, 'operator');
-   addClickHandlerToButton(buttonComClickHandler, 'command');
+}
 
+function render() {
+   $("#output").text(register2 + " " + operation);
+   $("#input").text(register1);
+}
+
+$(document).on("ready", function() {
+   $("#output").text("Welcome");
+   $(".number").on("click", buttonNumClickHandler);
+   $(".operator").on("click", buttonOpClickHandler);
+   $(".command").on("click", buttonComClickHandler);
+   $("button").one("click", function() {
+      $("#output").text("");
+   });
 });
+
