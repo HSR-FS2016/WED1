@@ -190,9 +190,7 @@ tr:nth-child(even) {
 }
 
 table, th, td {
-   border: 0px;
    padding: 10px;
-   margin: 0px;
 }
 
 
