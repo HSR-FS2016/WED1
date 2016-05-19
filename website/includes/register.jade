@@ -3,29 +3,39 @@ form
   fieldset
     legend Autor
     
-    input(type="radio",name="gender",value="Herr") 
-    span Herr
-    input(type="radio",name="gender",value="Frau") 
-    span Frau
-    p Name
+    div(class="inputarea")
+       span Herr 
+       input(type="radio",name="gender",value="Herr")
+    div
+       span Frau 
+       input(type="radio",name="gender",value="Frau") 
+    
+    div(class="inputarea")
+      p Name
       input(type="text")
-    p E-Mail
+    div(class="inputarea")
+      p E-Mail
       input(type="email")
-    p Webseite
+    div(class="inputarea")
+      p Webseite
       input(type="url")
-    p Geburtsdatum
+    div(class="inputarea")
+      p Geburtsdatum
       input(type="date")
-    p Nationalität
-      select
+    div(class="inputarea")
+       p Nationalität
+       select
         option(value="Switzerland") Switzerland
         option(value="Deutschland") Deutschland
         option(value="Frankreich") Frankreich
         option(value="Italien") Italien
         option(value="Österreich") Österreich
-    p Profiltext
-      textarea
+    div(class="inputarea")
+       p Profiltext
+       textarea
+    
     p Profilbilder
-      input(type="file")
+    input(type="file")
     
   fieldset
     legend Rechtliches

@@ -171,6 +171,23 @@ button img {
    height: 1em;
 }
 
+/* form */
+
+.inputarea {
+   margin: 0.5em;
+}
+
+.inputarea p {
+   margin: 0px;
+}
+
+.inputarea input, textarea {
+   background-color: rgb(240, 240, 240);
+   border: none;
+   width: 100%;   
+   border-bottom: 1px solid black;
+}
+
 /* text */
 
 p {
