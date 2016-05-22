@@ -21,6 +21,10 @@ body {
 	padding:15px;
 }
 
+article p small {
+	color: grey;
+}
+
 nav a {color:rgb(0,94,162)}
 
 article a {color:black;}
@@ -164,6 +168,9 @@ button {
    margin:0.5em 0.5em 0.5em 0;
    color: white;
 	 font-size: 1em;
+	 -webkit-box-shadow: 0 0 5px 2px lightgrey;
+	 -moz-box-shadow: 0 0 5px 2px lightgrey;
+	box-shadow: 0 0 5px 2px lightgrey;
 }
 
 button img {
@@ -329,8 +336,15 @@ Defintion List
 dt {
 	font-size:1.2em;
 	font-weight: bold;
+	color: rgb(0,94,162);
+	margin: 5px;
 }
 
 dd {
-	list-style: circle;
+	margin-left: 15px;
+}
+
+dd:before {
+	content: '⌖';
+	margin-right: 5px;
 }
