@@ -240,6 +240,7 @@ p {
 /* table */
 .zeitgewinn {
    width:100%;
+	 border-collapse: collapse;
 }
 
 tbody th {
@@ -258,7 +259,7 @@ td {
 }
 
 tr:nth-child(even) {
-   background-color: rgb(150,150, 200);
+   background-color: rgb(219,230,239);
 }
 
 table, th, td {
