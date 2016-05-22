@@ -46,7 +46,7 @@ gulp validate-html
 time: ALLE Zeitangaben richtig ausgezeichnet, datetime-Attribute gesetzt
 Small: Nur für rechtliche Angaben benutzt)
 - [x] SVG-Diagramm Role Attribut gesetzt, type korrekt gesetzt, Animation funktioniert (als object eingebunden)
-- [ ] img, video, iframe, svg, figure, figcaption, height="", width="", alt="" (Multimediaelemente mit Figure und Caption ausgezeichnet Alt-Text gesetzt Source-Grösse angegeben (height, width))
+- [x] img, video, iframe, svg, figure, figcaption, height="", width="", alt="" (Multimediaelemente mit Figure und Caption ausgezeichnet Alt-Text gesetzt Source-Grösse angegeben (height, width))
 - [x] video, source, track, type="" (Alle Videoformate inkl. type="" eingebunden, track eingebunden)
 - [x] ul, ol, li, dl, dd, dt (Listen richtig verwendet)
 - [x] Search-form, datalist, type=search, button type=submit (korrekter Aufbau, Datalist verwendet
@@ -58,13 +58,13 @@ KEIN input type=submit Aria-Label für Suchfeld)
 - [x] table, thead, tbody, tr, th, td, rowspan="", colspan="" (Tabelle korrekt ausgezeichnet, Zellen verbunden, thead, tbody und th/td korrekt verwendet)
 
 ### CSS
-- [ ] Valide, korrekt, wartbar
+- [x] Valide, korrekt, wartbar
 - [x] Erscheinung (Styling analog Vorgabe (Visualisierung / Video))
 - [x] counter, content (Kapitel nummeriert)
 - [x] [hreflang], :before, background (Sprachmenü mit Flaggen)
 - [x] p > c statt p c, * (Effiziente Selektoren verwendet)
-- [ ] rem, em, % (Fluide Breitenangabe, Pixel nur wenn sinnvoll)
-- [ ] calc() eingesetzt für die Höhe des iframe und des YT-Videos
+- [x] rem, em, % (Fluide Breitenangabe, Pixel nur wenn sinnvoll)
+- [x] calc() eingesetzt für die Höhe des iframe und des YT-Videos
 - [x] :nth-child() (Tabellenzeilen alternativ eingefärbt)
 - [ ] input, select, button, :hover, :active, :not() (Hover- und Active-Zustände definiert für Form-Elemente)
 - [x] float Float nur für Bilder / Font-Size Slides
