@@ -2,53 +2,42 @@ h2 Neuen Autor registrieren
 form
   fieldset
     legend Autor
-    
-    div(class="inputarea")
-       span Herr 
-       input(type="radio",name="gender",value="Herr")
-    div
-       span Frau 
-       input(type="radio",name="gender",value="Frau") 
-    
-    div(class="inputarea")
-      p Name
-      input(type="text")
-    div(class="inputarea")
-      p E-Mail
-      input(type="email")
-    div(class="inputarea")
-      p Webseite
-      input(type="url")
-    div(class="inputarea")
-      p Geburtsdatum
-      input(type="date")
-    div(class="inputarea")
-       p Nationalität
-       select
-        option(value="Switzerland") Switzerland
-        option(value="Deutschland") Deutschland
-        option(value="Frankreich") Frankreich
-        option(value="Italien") Italien
-        option(value="Österreich") Österreich
-    div(class="inputarea")
-       p Profiltext
-       textarea
+    p Herr 
+      input(type="radio",name="gender",value="Herr")
+    p Frau 
+      input(type="radio",name="gender",value="Frau") 
+    p Name
+    input(type="text")
+    p E-Mail
+    input(type="email")
+    p Webseite
+    input(type="url")
+    p Geburtsdatum
+    input(type="date")
+    p Nationalität
+    select
+      option(value="Switzerland") Switzerland
+      option(value="Deutschland") Deutschland
+      option(value="Frankreich") Frankreich
+      option(value="Italien") Italien
+      option(value="Österreich") Österreich
+    p Profiltext
+       textarea(rows="10")
     
     p Profilbilder
     input(type="file")
-    
+  br
   fieldset
     legend Rechtliches
-      br
+    p
       input(type="checkbox",value="Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin") 
       span Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin
-      br
+    p
       input(type="checkbox",value="Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin")
       span Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin
-      br
+    p
       input(type="checkbox",value="Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden") 
       span Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden
-      br
   button(type="submit") Account Anlegen
   button(type="reset") Eingaben zurücksetzen 
   

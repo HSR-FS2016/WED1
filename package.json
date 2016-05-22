@@ -6,6 +6,7 @@
   "devDependencies": {
     "browser-sync": "^2.12.5",
     "gulp": "^3.9.1",
+    "gulp-csslint": "^0.3.0",
     "gulp-jade": "^1.1.0",
     "gulp-w3cjs": "^1.2.0"
   },
