@@ -23,7 +23,7 @@ body {
 
 nav a {color:rgb(0,94,162)}
 
-section a {color:black;}
+article a {color:black;}
 
 #siteheader {
 	display: flex;
@@ -54,8 +54,9 @@ ol li {
    margin-left: 20px
 }
 
-footer time {
-	float: right;
+article footer  {
+	display: flex;
+	justify-content: space-between;
 }
 
 /* Navigatiion */
@@ -115,34 +116,13 @@ nav li a[hreflang="it"]:before {
 /*
 	Add Numbers Before h2 Titles
 */
-
-#taschenrechner, #demo, #cas, #variation, #gewinn, #tricks, #worst, #model {
+.content h2 {
 	border-bottom: 2px solid black;
 }
-
-#taschenrechner:before {
-	content: '1 ';
-}
-#demo::before {
-	content: '2 ';
-}
-#cas:before {
-	content: '3 ';
-}
-#variation:before {
-	content: '4 ';
-}
-#gewinn:before {
-	content: '5 ';
-}
-#tricks:before {
-	content: '6 ';
-}
-#worst:before {
-	content: '7 ';
-}
-#model:before {
-	content: '8 ';
+body {counter-reset: ebene1;}
+.content h2:before {
+	content: counter(ebene1);
+	counter-increment: ebene1;
 }
 
 footer {
@@ -308,11 +288,11 @@ table, th, td {
 	margin:0;
 }
 
-.footer .rights {
+.footer small {
 	line-height: 1.5em;
 }
 
-.footer .rights img {
+.footer small img {
 	vertical-align: middle;
 }
 
@@ -340,4 +320,17 @@ table, th, td {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+/*
+Defintion List
+*/
+
+dt {
+	font-size:1.2em;
+	font-weight: bold;
+}
+
+dd {
+	list-style: circle;
 }
