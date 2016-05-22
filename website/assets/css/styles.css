@@ -21,19 +21,21 @@ body {
 	padding:15px;
 }
 
-a {color:rgb(0,94,162)}
+nav a {color:rgb(0,94,162)}
 
-header {
+section a {color:black;}
+
+#siteheader {
 	display: flex;
 	margin: 20px 0 0 0;
 }
 
-header img {
+#siteheader img {
 	margin:10px 0 0 5px;
 	position: absolute;
 }
 
-header h1 {
+#siteheader h1 {
 	color:#FFF;
 	font-size: 3em;
 	margin:20px 0 15px 120px;
@@ -76,8 +78,14 @@ nav li {
 nav ul li ul > li {
 	margin-left:20px;
 }
-header {
+#siteheader {
 	background: rgb(0,94,162);
+}
+
+h1 {
+	font-size: 2.2em;
+	margin:30px 0 15px 0;
+	padding: 0 0 5px 0;
 }
 
 h2 {
@@ -139,7 +147,11 @@ nav li a[hreflang="it"]:before {
 
 footer {
 	border: 1px dashed #000;
-	padding: 0.4em;
+}
+
+footer small, footer time{
+	font-size: 0.9em;
+	margin:0.1em;
 }
 
 /* images */
@@ -148,17 +160,18 @@ figure.calculator {
 	width:30%;
 	padding:0.5em;
 }
-
-figure.gewinn {
-	width:30%;
-	margin: 0 auto;
-}
 figure figcaption {
-	font-size:0.7em;
+	font-size:0.9em;
 	color:gray;
 }
 figure img {
 	width:100%;
+}
+
+/* Object  */
+object {
+	width:30%;
+	margin-left:35%;
 }
 
 /* button */
