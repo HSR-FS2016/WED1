@@ -3,8 +3,8 @@
  */
 
 function calculate(left, right, operator) {
-   var _left = parseInt(left);
-   var _right = parseInt(right);
+   var _left = parseFloat(left);
+   var _right = parseFloat(right);
    if(operator === "+")
       return _left + _right;
    if(operator === "-")
@@ -35,18 +35,27 @@ function buttonNumClickHandler (event) {
 }
 
 function buttonOpClickHandler (event) {
-   operator = event.target.value;
-   if(operand === "") {
+   
+   
+   if(input.text !== "" && operand !== "") {
+      equal();
+   } else if(operand === "") {
       operand = input.text();
       input.text("");
    }
+
+   operator = event.target.value;
    output.text(operand + " " + operator);
    
 }
 
 function buttonEqualClickHandler (event) {
-   if(operand === "" || operand === "" || input.text() === "") {
-      output.text("error");
+   equal();
+}
+
+function equal() {
+   if(operand === "" || operator === "" || input.text() === "") {
+      output.text("syntax error");
       return;
    }
 
@@ -57,6 +66,7 @@ function buttonEqualClickHandler (event) {
    input.text("");
    output.text(operand + " " + operator);
 }
+
 
 function buttonClearClickHandler (event) {
    input.text("");
