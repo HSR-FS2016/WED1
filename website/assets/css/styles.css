@@ -82,6 +82,7 @@ article footer  {
 /* Navigatiion */
 
 nav a {color:rgb(0,94,162)}
+a:hover {text-decoration: none;}
 nav {
 	border: 2px solid rgb(0,94,162);
 	background: rgb(246,246,246);
@@ -144,7 +145,7 @@ button {
    background-color: rgb(0,94,162);
    border-radius: 0.4em;
    border: 0;
-   padding: 0.4em;
+   padding: 0.5em;
    margin:0.5em 0.5em 0.5em 0;
    color: white;
 	 font-size: 1em;
@@ -153,9 +154,14 @@ button {
 	 box-shadow: 0 0 5px 2px lightgrey;
 }
 
+button:hover {
+	color: lightgrey;
+}
+
 button img {
    width: 1em;
    height: 1em;
+	 margin-right:0.5rem;
 }
 
 /* form */
@@ -198,6 +204,18 @@ form input[type="search"] {
 	padding:0.6em 0;
 	margin:0 0.8rem 0 0;
 }
+
+form input[type="search"]:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="url"]:focus,
+form input[type="date"]:focus,
+form textarea:focus {
+	color: rgb(0,94,162);
+	outline: none;
+	border-bottom: 1px solid rgb(0,94,162);
+}
+
 form input[type="radio"] {
 	margin: 1rem 0 1rem 0;
 }
@@ -286,6 +304,10 @@ footer small, footer time{
 .footer a {
 	text-decoration: underline;
 	color:#fff;
+}
+
+.footer a:hover {
+	text-decoration: none;
 }
 
 .footer small {

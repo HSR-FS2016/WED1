@@ -66,7 +66,7 @@ KEIN input type=submit Aria-Label für Suchfeld)
 - [x] rem, em, % (Fluide Breitenangabe, Pixel nur wenn sinnvoll)
 - [x] calc() eingesetzt für die Höhe des iframe und des YT-Videos
 - [x] :nth-child() (Tabellenzeilen alternativ eingefärbt)
-- [ ] input, select, button, :hover, :active, :not() (Hover- und Active-Zustände definiert für Form-Elemente)
+- [x] input, select, button, :hover, :active, :not() (Hover- und Active-Zustände definiert für Form-Elemente)
 - [x] float Float nur für Bilder / Font-Size Slides
 
 ### JS

@@ -9,15 +9,16 @@ section
       p Frau 
         input(type="radio",name="gender",value="Frau") 
       p Name
-      input(type="text")
+      input(type="text",required=true)
       p E-Mail
-      input(type="email")
+      input(type="email",required=true)
       p Webseite
-      input(type="url")
+      input(type="url",required=true)
       p Geburtsdatum
-      input(type="date")
+      input(type="date",required=true)
       p Nationalität
-      select
+      select(required=true)
+        option(value="") -- Wählen --
         option(value="Switzerland") Switzerland
         option(value="Deutschland") Deutschland
         option(value="Frankreich") Frankreich
