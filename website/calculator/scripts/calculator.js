@@ -18,7 +18,7 @@ function calculate(left, right, operator, callback) {
       return callback(_left * _right, null);
 }
 
-  
+
 /**
  * UI
  */
@@ -71,23 +71,6 @@ function buttonOpClickHandler(event) {
          printScreen();
          break;
       case State.READOP2:
-         equal();    
-         state = State.READOPT;
-         break;
-   }
-}
-
-function buttonEqualClickHandler(event) {
-   switch(state) {
-      case State.READOP1:
-         break;
-      case State.READOPT:
-         if(op1 === "" && opt === "" && op2 !== "")
-            break;
-         state = State.ERROR;
-         printError("Syntax Error");
-         break;
-      case State.READOP2:
          equal();
          state = State.READOPT;
          break;
@@ -105,10 +88,27 @@ function equal() {
    });
 }
 
-function buttonClearClickHandler(event) {
-   op1 = ""; op2 = ""; opt = "";
-   printScreen(); 
-   state = State.READOP1;
+function buttonCommandHandler(command) {
+  if(command == "C") {
+    op1 = ""; op2 = ""; opt = "";
+    printScreen();
+    state = State.READOP1;
+  } else {
+    switch(state) {
+       case State.READOP1:
+          break;
+       case State.READOPT:
+          if(op1 === "" && opt === "" && op2 !== "")
+             break;
+          state = State.ERROR;
+          printError("Syntax Error");
+          break;
+       case State.READOP2:
+          equal();
+          state = State.READOPT;
+          break;
+    }
+  }
 }
 
 function printScreen() {
@@ -125,14 +125,13 @@ $(document).on("ready", function() {
    $("#output").text("Welcome");
    $(".number").on("click", buttonNumClickHandler);
    $(".operator").on("click", buttonOpClickHandler);
-   
-   $(".equal").on("click", buttonEqualClickHandler);
-   $(".clear").on("click", buttonClearClickHandler);
+   $(".command").on("click", function() {
+     buttonCommandHandler($(this).html());
+   });
    $("body").one("click", function() {
-      
+
    });
 
    output = $("#output");
    input = $("#input");
 });
-
