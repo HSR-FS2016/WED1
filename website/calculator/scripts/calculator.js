@@ -2,20 +2,47 @@
  * core
  */
 
-function calculate(left, right, operator, callback) {
-   var _left = parseFloat(left);
-   var _right = parseFloat(right);
-   if(operator === "+")
-      return callback(_left + _right, null);
-   if(operator === "-")
-      return callback(_left - _right, null);
-   if(operator === "/") {
-      if(_right == 0)
+
+var op1 = "";
+var op2 = "";
+var opt = "";
+
+function setOp1(value) {
+   op1 = value;
+}
+
+function setOp2(value) {
+   op2 = value;
+}
+
+function setOpt(value) {
+   opt = value;
+}
+
+function getOp1() {
+   return op1;
+}
+
+function getOp2() {
+   return op2;
+}
+
+function getOpt() {
+   return opt;
+}
+
+function calculate(callback) {
+   if(opt === "+")
+      return callback(op2 + op1, null);
+   if(opt === "-")
+      return callback(op2 - op1, null);
+   if(opt === "/") {
+      if(op1 == 0)
          return callback(null, "Divide by zero error");
-      return callback(_left / _right, null);
+      return callback(op2 / op1, null);
    }
-   if(operator === "*")
-      return callback(_left * _right, null);
+   if(opt === "*")
+      return callback(op2 * op1, null);
 }
 
 
@@ -31,9 +58,7 @@ State = {
 }
 
 var state = State.READOP1;
-var op1 = "";
-var op2 = "";
-var opt = "";
+
 
 var input;
 var output;
@@ -54,20 +79,20 @@ function buttonNumClickHandler (event) {
 }
 
 function handleInput(value) {
-   op1 = op1 + "" + value;
+   setOp1(getOp1() + "" + value);
    printScreen();
 }
 
 function buttonOpClickHandler(event) {
    switch(state) {
       case State.READOP1:
-         opt = event.target.value;
+         setOpt(event.target.value);
          state = State.READOPT;
-         op2 = op1; op1 = "";
+         setOp2(getOp1()); setOp1("");
          printScreen();
          break;
       case State.READOPT:
-         opt = event.target.value;
+         setOpt(event.target.value);
          printScreen();
          break;
       case State.READOP2:
@@ -78,11 +103,12 @@ function buttonOpClickHandler(event) {
 }
 
 function equal() {
-   calculate(op2, op1, opt, function(result, error) {
+   calculate(function(result, error) {
       if(error) {
          printError(error);
+         state = State.ERROR;
       } else {
-         op2 = result; op1 = ""; opt = "";
+         setOp2(result); setOp1(""); setOpt("");
          printScreen();
       }
    });
@@ -90,7 +116,7 @@ function equal() {
 
 function buttonCommandHandler(command) {
   if(command == "C") {
-    op1 = ""; op2 = ""; opt = "";
+    setOp1("");setOp2("");setOpt("");
     printScreen();
     state = State.READOP1;
   } else {
@@ -98,7 +124,7 @@ function buttonCommandHandler(command) {
        case State.READOP1:
           break;
        case State.READOPT:
-          if(op1 === "" && opt === "" && op2 !== "")
+          if(getOp1() === "" && getOpt() === "" && getOp2() !== "")
              break;
           state = State.ERROR;
           printError("Syntax Error");
@@ -112,8 +138,8 @@ function buttonCommandHandler(command) {
 }
 
 function printScreen() {
-   input.text(op1);
-   output.text(op2 + " " + opt);
+   input.text(getOp1());
+   output.text(getOp2() + " " + getOpt());
 }
 
 function printError(msg) {
