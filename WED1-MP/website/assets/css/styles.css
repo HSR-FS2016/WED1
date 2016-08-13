@@ -51,12 +51,12 @@ body {counter-reset: ebene1;}
 	background: rgb(0,94,162);
 }
 
-#siteheader img {
+#siteheader > img {
 	margin:0.7rem 0 0 0.4rem;
 	position: absolute;
 }
 
-#siteheader h1 {
+#siteheader > h1 {
 	color:#FFF;
 	font-size: 3em;
 	margin:20px 0 15px 120px;
@@ -68,7 +68,7 @@ body {counter-reset: ebene1;}
 }
 
 /* article */
-article p small {
+article p > small {
 	color: grey;
 }
 
@@ -77,6 +77,7 @@ article a {color:black;}
 article footer  {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 0.6rem;
 }
 
 /* Navigatiion */
@@ -100,7 +101,7 @@ nav ul li ul > li {
 }
 
 /* hreflang images */
-nav li a[hreflang]:before {
+nav li > a[hreflang]:before {
 	content: ' ';
 	display: inline-block;
 	background-size: 0.9rem 0.9rem;
@@ -170,18 +171,25 @@ button img {
 	float: right;
 }
 
-#font-size-form > label, #font-size-form > input, #font-size-form > output {
+#font-size-form > label,
+#font-size-form > input,
+#font-size-form > output {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0; margin: 0;
 }
 
-form fieldset {
+form > fieldset {
 	padding:0.6rem;
 }
 
-form p {
+form label {
 	 color:grey;
+	 display: block;
+}
+
+form div > label {
+	 display: inline;;
 }
 
 form input[type="text"],
@@ -222,7 +230,7 @@ form input[type="radio"] {
 form input[type="checkbox"] {
 	margin:1.25rem 0.4rem 0 0;
 }
-form select {
+form label > select {
 	width: 100%;
 	margin-bottom: 1rem;
 }
@@ -289,7 +297,7 @@ footer {
 	border: 1px dashed #000;
 }
 
-footer small, footer time{
+footer > small, footer > time{
 	font-size: 0.9em;
 	margin:0.1em;
 }
@@ -304,13 +312,14 @@ footer small, footer time{
 .footer a {
 	text-decoration: underline;
 	color:#fff;
+	margin-right: 0.4rem;
 }
 
 .footer a:hover {
 	text-decoration: none;
 }
 
-.footer small {
+.footer > small {
 	line-height: 1.5em;
 }
 
@@ -320,7 +329,7 @@ footer small, footer time{
 
 /* iFrames */
 
-.demo iframe {
+.demo > iframe {
 	width:50vw;
 	height:calc(50vw * 1.06);
 }
@@ -329,7 +338,7 @@ video {
 	width: 100%;
 }
 
-.video iframe {
+.video > iframe {
 	width:calc(100vw - 30px);
 	height:calc(100vw/16*9);
 }

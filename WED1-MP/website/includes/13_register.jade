@@ -4,8 +4,9 @@ section
   form
     fieldset
       legend Autor
-      p Herr 
+      label Herr 
         input(type="radio",name="gender",value="Herr")
+<<<<<<< HEAD:WED1-MP/website/includes/13_register.jade
       p Frau 
         input(type="radio",name="gender",value="Frau")
       label   
@@ -26,22 +27,42 @@ section
         option(value="Italien") Italien
         option(value="Österreich") Österreich
       p Profiltext
+=======
+      label Frau 
+        input(type="radio",name="gender",value="Frau") 
+      label Name
+        input(type="text",required=true)
+      label E-Mail
+        input(type="email",required=true)
+      label Webseite
+        input(type="url",required=true)
+      label Geburtsdatum
+        input(type="date",required=true)
+      label Nationalität
+        select(required=true)
+          option(value="") -- Wählen --
+          option(value="Switzerland") Switzerland
+          option(value="Deutschland") Deutschland
+          option(value="Frankreich") Frankreich
+          option(value="Italien") Italien
+          option(value="Österreich") Österreich
+      label Profiltext
+>>>>>>> 3a964f24f6f0ea3156cca6cff99d50f2f449f202:website/includes/13_register.jade
          textarea(rows="10")
       
-      p Profilbilder
-      input(type="file")
-    br
+      label Profilbilder
+        input(type="file")
     fieldset
       legend Rechtliches
-      p
-        input(type="checkbox",value="Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin") 
-        span Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin
-      p
-        input(type="checkbox",value="Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin")
-        span Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin
-      p
-        input(type="checkbox",value="Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden") 
-        span Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden
+      div
+        input(type="checkbox",name="question1",value="Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin") 
+        label(for="question1") Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin
+      div
+        input(type="checkbox",name="question2",value="Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin")
+        label(for="question2") Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin
+      div
+        input(type="checkbox",name="question3",value="Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden") 
+        label(for="question3") Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden
     button(type="submit") Account Anlegen
     button(type="reset") Eingaben zurücksetzen 
     
