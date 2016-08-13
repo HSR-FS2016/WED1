@@ -9,6 +9,9 @@
 		<pre>
 			<code id="handlebars-Template">
 {{#with books}}
+				{{#each books}}
+						{{title}}
+				{{/#each}}
 	&lt;p&gt;{{this.length}} Bücher stehen bereit&lt;/p&gt;
 {{/with}}
 			</code>

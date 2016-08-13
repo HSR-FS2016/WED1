@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"/>
+    <title>Übung Handlebars - Vorlage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+</head>
+<body>
+
+
+<div id="template">
+    {{#each suggestions}}
+        <h1>{{name}}</h1>
+        <span>{{author}}</span>
+    {{/each}}
+</div>
+
+<div id="text"></div>
+
+
+
+
+
+<script>
+    (function($) {
+
+        $(document).ready(function(){
+
+            /*$.getJSON("http://localhost:8080/suggestions", function(data) {
+                console.log(data);
+                renderHTML(data);
+            });*/
+
+            /*$.getJSON('data.json' , function(data){
+               console.log(data);
+                renderHTML(data);
+            });
+            */
+            $('#text').load('text.txt');
+
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                        console.log(request.data);
+                }
+            }
+            request.open("GET", "http://localhost:8080/suggestions", true);
+            request.send();
+
+        });
+
+        var input = $('#template');
+        var outputRendered = $('#template');
+
+        function renderHTML(data) {
+            // compile the actual Template data
+            var templateFunction = Handlebars.compile(input.html());
+
+            // generate some HTML code from the compiled Template
+            var generatedHtml = templateFunction(data);
+            // write down generated HTML to DOM
+            //output.text(generatedHtml);
+            outputRendered.html(generatedHtml);
+        }
+
+        /*$(function() {
+            $('#execute').click(renderHTML);
+        });*/
+    })(jQuery);
+</script>
+</body>
+</html>
