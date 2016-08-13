@@ -32,9 +32,9 @@
 - [x] DOM + Events + Jquery
 - [x] DOM + Events + Jquery
 - [x] HTTP & node
-- [ ] AJAX
+- [x] AJAX
 - [x] UCD
-- [ ] Repetition
+- [x] Repetition
 
 
 ## Selbststudium
