@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.2" width="170mm" height="200mm" viewBox="0 0 17000 20000" preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<style>
+		a:hover > path { opacity: 0.7; }
+		a:hover > text tspan { font-weight: 600; }
+		a:hover { cursor: pointer; }
+	</style>
+	<a xlink:href="https://de.wikipedia.org/wiki/Schweiz" xlink:title="Wikipediaartikel über die Schweiz" target="_blank">
+		<path fill="rgb(0,102,255)" stroke="none" d="M 7489,8767 L 8388,7868 9511,7643 10185,8093 10185,8542 10859,8991 10410,9441 9960,9216 9511,9665 9062,9216 8612,9665 8163,9441 7938,8767 7489,8767 Z"/>
+		<text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="8248" y="8826"><tspan fill="rgb(0,0,0)" stroke="none">Schweiz</tspan></tspan></tspan></text>
+	</a>
+	<a xlink:href="https://de.wikipedia.org/wiki/Frankreich" target="_blank" xlink:title="Wikipediaartikel über Frankreich">
+		<path fill="rgb(102,0,204)" stroke="none" d="M 7489,8767 L 8388,7868 8828,7780 9511,6295 6141,3375 300,4498 2097,7419 974,10564 4344,12361 5018,11463 6815,12137 8388,11912 8163,9441 7938,8767 7489,8767 Z"/>
+		<text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="3734" y="8040"><tspan fill="rgb(255,255,255)" stroke="none">Frankreich</tspan></tspan></tspan></text>
+	</a>
+	<a xlink:href="https://de.wikipedia.org/wiki/Deutschland" target="_blank" xlink:title="Wikipediaartikel über Deutschland">
+		<path fill="rgb(0,153,153)" stroke="none" d="M 14229,1802 L 14229,4723 12207,5397 13330,7194 12432,8317 10185,8093 9511,7643 8828,7780 9511,6295 7938,4947 8388,3600 9736,1353 10859,5 12432,1128 13779,904 14229,1802 Z"/>
+		<text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="9703" y="4333"><tspan fill="rgb(0,0,0)" stroke="none">Deutschland</tspan></tspan></tspan></text>
+	</a>
+	<a xlink:href="https://de.wikipedia.org/wiki/Österreich" target="_blank" xlink:title="Wikipediaartikel über Österreich">
+		<path fill="rgb(204,0,0)" stroke="none" d="M 10185,8093 L 12432,8317 13330,7194 14229,6969 15577,7194 15577,8317 14678,9441 13105,9441 11982,8767 10859,8991 10185,8542 10185,8093 Z"/>
+		<text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="13037" y="8377"><tspan fill="rgb(255,255,255)" stroke="none">Österreich</tspan></tspan></tspan></text>
+	</a>
+	<a xlink:href="https://de.wikipedia.org/wiki/Italien" target="_blank" xlink:title="Wikipediaartikel über Italien">
+		<path fill="rgb(255,153,0)" stroke="none" d="M 12881,10115 L 11758,10564 11758,11687 14004,14608 16700,16405 16251,16854 15352,15956 14903,16630 15352,17753 14229,18876 14004,18427 13555,19101 13330,20000 11308,18652 11533,18427 14004,18427 14453,17528 14004,16405 12881,15282 11533,14608 10185,12810 9736,11238 9062,11238 8388,11912 8163,9441 8612,9665 9062,9216 9511,9665 9960,9216 10410,9441 10859,8991 11982,8767 13105,9441 12881,10115 Z"/>
+		<text class="TextShape"><tspan class="TextParagraph" font-family="Liberation Sans, sans-serif" font-size="494px" font-weight="400"><tspan class="TextPosition" x="11769" y="14555"><tspan fill="rgb(0,0,0)" stroke="none">Italien</tspan></tspan></tspan></text>
+	</a>
+</svg>

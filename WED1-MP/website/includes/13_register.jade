@@ -1,0 +1,48 @@
+section
+  header
+    h1  Neuen Autor registrieren
+  form
+    fieldset
+      legend Autor
+      p Herr 
+        input(type="radio",name="gender",value="Herr")
+      p Frau 
+        input(type="radio",name="gender",value="Frau")
+      label   
+        p Name
+        input(type="text",required=true)
+      p E-Mail
+      input(type="email",required=true)
+      p Webseite
+      input(type="url",required=true)
+      p Geburtsdatum
+      input(type="date",required=true)
+      p Nationalität
+      select(required=true)
+        option(value="") -- Wählen --
+        option(value="Switzerland") Switzerland
+        option(value="Deutschland") Deutschland
+        option(value="Frankreich") Frankreich
+        option(value="Italien") Italien
+        option(value="Österreich") Österreich
+      p Profiltext
+         textarea(rows="10")
+      
+      p Profilbilder
+      input(type="file")
+    br
+    fieldset
+      legend Rechtliches
+      p
+        input(type="checkbox",value="Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin") 
+        span Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin
+      p
+        input(type="checkbox",value="Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin")
+        span Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin
+      p
+        input(type="checkbox",value="Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden") 
+        span Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit entsprechen und eingereichte Medien Bilder nicht manipuliert wurden
+    button(type="submit") Account Anlegen
+    button(type="reset") Eingaben zurücksetzen 
+    
+    

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <div id="template">
+        <p>Id: {{{id}}}</p>
+        <p>Name: {{{name}}}</p>
+    </div>
+    <span>id </span><input id="id" value="myId"/>
+    <span>name </span><input id="name" value="myName">
+    <button id="add">Add</button>
+</div>
+<script>
+function applyTemplate(template, dataObject) {
+    template.find('p').first().html("<p>Id: " + dataObject.id + "</p>");
+    template.find('p').last().html("<p>Name: " + dataObject.name + "</p>");
+    console.log("id: {{{}}".replace(/id/, "Hello"));
+}
+$("#add").click(function(){
+    var data = {
+        id: $("#id").val(),
+        name: $("#name").val()
+    };
+    var template = $("#template");
+    applyTemplate(template,data);
+});
+</script>
+</body>
+</html>

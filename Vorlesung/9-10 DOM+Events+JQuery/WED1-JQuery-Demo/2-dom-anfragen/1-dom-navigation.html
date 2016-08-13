@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WED1 JQuery Demo</title>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script>
+        jQuery(function($) {
+            console.log(1, $("p"));
+            console.log(2, $("p").parent());
+            console.log(3, $("p").prev());
+            console.log(4, $("p").next());
+            console.log(5, $("p").parent());
+            console.log(6, $("p").children());
+        })
+    </script>
+</head>
+<body>
+    <h1>DOM Navigation</h1>
+    <p>
+        <span>Hello</span>
+        <span>World</span>
+    </p>
+    <img src="http://www.nasa.gov/sites/default/files/thumbnails/image/14797031062_4cbe0f218f_o.jpg" style="width:150px">
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>WED1 Übung: HTML - 3 Avanced</title>
+		<link rel="icon" href="../HSR.Template.Exercises/icon-document.png" type="image/png">
+
+		<link rel="stylesheet" type="text/css" href="../HSR.Template.Exercises/documentStyle.css">
+		<script src="../HSR.Template.Exercises/solutions.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		<style>
+			table {
+				max-width: 100%;
+			}
+			table input { width: 100%; }
+			table thead tr th:not(:first-child) { text-align: center; }
+			table thead, col.firstRow { background: silver; }
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a class="backlink" href="../index.html">⇦</a>
+			WED1 - HTML <img src="../images/HTML5_Logo.svg" alt="HTML logo" style="height: 1em; width: auto;" /> Übung 2: Advanced
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+
+		<h2>National News Site</h2>
+		<p>
+			In den folgenden Aufgaben geht es darum, eine Webseite einer Zeitung zu erstellen und verschiedene
+			Inhalte darin einzubinden.
+		</p>
+
+
+		<ol style="list-style-type: lower-alpha;">
+			<li>
+				Verwenden Sie die Vorlage: <a href="./template/index.html" target="_blank" download>template/index
+				.html</a> und die textuellen Inhalte: <a href="./media/as-text.txt" target="blank">media/as-text
+				.txt</a>.
+				Die Vorlage enthält das Grundgerüst sowie einige Styles (<a href="./styles/style.css" download>styles/style.css</a>) um ein
+				minimales Layoutvzu erzeugen für Mobil &amp; Desktop. Kümmern Sie sich nicht um die Darstellung,
+				sondern nur um die Struktur des HTML.
+				<a href="./media/visualization.pdf" target="blank">So soll die Seite schlussendlich aussehen</a>
+			</li>
+			<li>
+				Alle Medien wie Videos oder Bilder inklusive den SVG-Icons und dem Bookmark-Icon finden Sie im Ordner
+				<a 	href="./media">media</a>.
+			</li>
+			<li>
+				Erweitern Sie die Vorlage um weitere Abschnitte wie Sections, Aside oder Navigationen.
+			</li>
+			<li>
+				Erweitern Sie das Dokument um Charset, Titel und Metadaten.
+				Wählen Sie einen Titel, der das Suchmaschinenranking positiv beeinflusst und dem Benutzer hilft, die Seite einzuordnen.
+				Ergänzen Sie Metadaten wie Autor, Publisher, Keywords, Description und Bookmark icon (icon-national.png).
+			</li>
+			<li>
+				Bauen Sie alle Inhalte gemäss Muster auf. Hinweise:
+				<ul>
+					<li>
+						Verwenden Sie als Links für die Breadcrumb und die Hauptnavigation die gleiche Linkstruktur wie sie optisch sichtbar ist. Z.B. <pre style="display: inline-block; padding: 0;">/news/national/asien-ozeanien/</pre> oder <pre style="display: inline-block;">/news/front/latest/</pre>.
+					</li>
+					<li>
+						Benutzen Sie eine Datalist für die Suchvorschläge des Suchfeldes.
+					</li>
+					<li>
+						Fügen Sie das Logo als SVG direkt ins Dokument ein. Binden Sie alle andern SVG's wann möglich als Bild ein. (Für Interaktivität ist dies nicht möglich).
+					</li>
+					<li>
+						Benutzen Sie für das Such-Icon eine SVG-Data-Url. Passen Sie width und height des SVG's auf 3mm an. Codieren Sie den Inhalt (Ohne die XML-Deklarationszeile) des SVG's als Base64 mittels <a href="https://www.base64encode.org/" target="_blank">base64encode.org/</a>.
+					</li>
+					<li>
+						Wenn Sie das <code>time</code> Element einsetzen, setzen Sie auch das <code>datetime</code> Attribut. <a href="https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/time" target="_blank">Selfhtml Wiki: Time Element</a>
+					</li>
+					<li>
+						Binden Sie für das Video die englischen Untertitel ein. Chrome kann diese noch nicht anzeigen. Benutzen Sie Firefox um dies auszuprobieren.
+					</li>
+					<li>
+						Nutzen Sie <code>figure</code> für alle Elemente mit Unterschriften. Setzen Sie das <code>alt</code>-Attribut für alle Bilder. Nutzen Sie <code>caption</code> für die Tabelle. Nutzen Sie <code>small</code> Für Angaben zum Autors. Sie können die Angabe über den Autor als fertiges HTML von der Mediawiki Seite erhalten. Folgen Sie dazu dem Link und klicken Sie auf "Download". Bei "Credit the author" finden Sie die entsprechenden Snippets.
+					</li>
+					<li>
+						Fügen Sie den Formularelementen sinnvolle Validierung hinzu.
+					</li>
+					<li>
+						Für das Youtube Video erhalten Sie den Embed-Code auf Youtube unter "Share".
+					</li>
+					<li>
+						Schauen Sie sich die folgende Liste an und finden Sie heraus, für welche Elemente sie WAI-ARIA Attribute vergeben sollen: <a href="https://www.w3.org/TR/html-aria/#docconformance" target="_blank">w3.org/TR/html-aria/#docconformance</a>. Tipp: Schauen Sie sich vor Allem die Elemente an, wo "No corresponding role" steht.
+					</li>
+				</ul>
+			</li>
+			<li>
+				Benutzen Sie den <a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C Validator</a> um ihre Seite zu validieren.
+			</li>
+		</ol>
+
+		<div class="solution">
+			<a href="./solution/index.html">solution/index.html</a>
+			<h3>Vorgehen</h3>
+			<ul>
+				<li>Bekanntes zuerst</li>
+				<li>Von Aussen nach Innen</li>
+			</ul>
+			<ol>
+				<li>Document Einleitung/Kopfbereich (header) &amp; Abschliessendes/Fussbereich (footer).</li>
+				<li>Inhalt Aufteilung: Navigation (nav), Hauptinhalt (main), Zusatzinhalte (aside).</li>
+				<li>Ev. Kopfbereiche für Navigation, Hauptinhalt und Zusatzinhalt.</li>
+				<li>Hauptinhalt Aufteilung: Kapitel/Thematische Abschnitte (section's).</li>
+				<li>Kapitel Aufteilung: Kopfbereich (header), Beiträge/Artikel (article's).</li>
+				<li>Artikel Aufteilung: Kopfbereich (header), Inhalte (p, figure, table, ...), Fussbereich (footer).</li>
+				<li>Kopfbereiche können aus mehreren Titeln bestehen. Z.B. einem Haupttitel (h2, h3, ...) und einem
+				Nebentitel (hx+1) oder einem Teaser (p).</li>
+				<li>Fussbereiche können Rechtliche Informationen (small), Kontaktinformationen (address),
+					Veröffentlichungsinformationen (time), ... enthalten.</li>
+			</ol>
+			<img src="./solution/Dokument-Strukturierung-Vorgehen.jpg" alt="Dokument Strukturierung Vorgehen"
+				 style="with: auto; max-width: 100%; height: auto;" />
+		</div>
+
+		<object data="./media/visualization.pdf" type="application/pdf" style="width: 100%; height: 50em;"></object>
+	</body>
+</html>

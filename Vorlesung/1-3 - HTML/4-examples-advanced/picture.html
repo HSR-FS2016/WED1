@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Images</title>
+		<style>
+			body { font-family: Ubuntu, Arial, Helvetica, sans-serif; }
+			img { height: 4em; width: auto; }
+		</style>
+	</head>
+	<body>
+		<picture>
+			<source type="image/webp" srcset="./media/Titelbild_Abend-320.webp" />
+			<source type="image/jpeg" srcset="./media/Titelbild_Abend-320.jpg" />
+
+			<!-- Fallback -->
+			<img src="./media/Titelbild_Abend-320.jpg" alt="University Rapperswil" />
+		</picture>
+
+		<picture>
+			<source media="(min-width: 1024px)" srcset="./media/Titelbild_Abend.jpg" />
+			<source media="(min-width: 480px)" srcset="./media/Titelbild_Abend-640.jpg, ./media/Titelbild_Abend.jpg 2x" />
+
+			<img src="./media/Titelbild_Abend-320.jpg" srcset="./media/Titelbild_Abend-320.jpg, ./media/Titelbild_Abend-640.jpg 2x" alt="University Rapperswil" />
+		</picture>
+	</body>
+</html>

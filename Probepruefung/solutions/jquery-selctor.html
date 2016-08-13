@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            console.log($("span[first]").text());
+            console.log($("div > span:last-child").text());
+            console.log($("div :nth-of-type(2n)").text());
+            console.log($("div:nth-of-type(2)").text());
+        });
+
+    </script>
+</head>
+<body>
+<h1>HTML EXAMPLE</h1>
+<div>
+    <span class="first">1</span>
+    <span class="span">2</span>
+    <span>3</span>
+    <span>4</span>
+</div>
+<div>
+    <p>
+        <span first="1">5</span>
+        <span>6</span>
+        <span>7</span>
+    </p>
+</div>
+</body>
+</html>

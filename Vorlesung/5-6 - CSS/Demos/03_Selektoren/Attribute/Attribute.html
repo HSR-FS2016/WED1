@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS-Beispiel: Attributselektor</title>
+    <style>
+        [type=submit] {font-weight: bold;}
+        [title~=Berlin] {color: green;}
+        [hreflang|=de] {font-style: italic;}
+    </style>
+</head>
+<body>
+
+<p><input type="text" value="Beispiel"> <input type="submit" value="Absenden"></p>
+
+<ul>
+    <li title="Berlin: eine schöne Stadt">Viele Informationen.</li>
+    <li title="Die Stadt Berlin besteht aus mehreren Stadteilen">Mehr Informationen.</li>
+    <li title="Das Brandenburger Tor steht in Berlin">Noch mehr Informationen.</li>
+</ul>
+
+<ul>
+    <li><a href="http://www.example.org/" hreflang="de">Beispielverweis</a></li>
+    <li><a href="http://www.example.com/" hreflang="de-at">Beispielverweis</a></li>
+    <li><a href="http://www.example.net/" hreflang="en-de">Beispielverweis</a></li>
+</ul>
+</body>
+</html>

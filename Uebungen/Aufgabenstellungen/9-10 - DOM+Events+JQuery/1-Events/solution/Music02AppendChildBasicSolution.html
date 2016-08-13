@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Music list with Basic DOM Append Operations </title>
+</head>
+<body>
+<h1>Songs</h1>
+<ul id="songs"></ul>
+<script>
+    var songs = [
+        {"title":"Thank you for the music", "artist":"ABBA"},
+        {"title":"California Girls", "artist":"Beach Boys"},
+        {"title":"How Deep Is Your Love", "artist":"Bee Gees"},
+        {"title":"Sweet Sixteen", "artist":"Chuck Berry"},
+        {"title":"Roll Over Beethoven", "artist":"Electric Light Orchestra"},
+        {"title":"Booze and Blues", "artist":"Ma Rainey"},
+        {"title":"Beds Are Burning", "artist":"Diesel and Dust"}
+    ];
+    function appendSongsLiElements (songs) {
+        var df = document.createDocumentFragment();
+            //using document fragment to append a list a elements is more efficient
+            //than appending each of the li elements individually as each append
+            //results in a reflow.
+        songs.forEach(function (song) {
+            var liElement = document.createElement("li");
+            var h3Element = document.createElement("h3");
+            liElement.appendChild(h3Element);
+            h3Element.textContent = song.title;
+            var pElement = document.createElement("p");
+            liElement.appendChild(pElement);
+            pElement.textContent = song.artist;
+            df.appendChild(liElement);
+        });
+        document.getElementById("songs").appendChild(df);
+    }
+    window.onload = function(){
+        var start = Date.now();
+        appendSongsLiElements(songs);
+        console.log("rendered in "+(start-(Date.now()))+" msecs");
+    };
+</script>
+</body>
+</html>

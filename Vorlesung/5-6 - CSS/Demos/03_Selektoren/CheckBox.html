@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input, label{
+            width: 4em;
+            height: 4em;
+            display: inline-block;
+            border-radius: 2em;
+        }
+
+        input{
+            position: absolute;
+            opacity: 0;
+        }
+
+        input + label{
+            background: red;
+        }
+
+        input:checked + label{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+        <input type="checkbox" id="checkbox"/><label for="checkbox"> </label>
+
+</body>
+</html>

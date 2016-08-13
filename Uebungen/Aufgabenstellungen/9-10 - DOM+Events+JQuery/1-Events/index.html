@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaScript: Einführung</title>
+		<link rel="icon" href="../HSR.Template.Exercises/icon-document.png" type="image/png">
+
+		<link rel="stylesheet" type="text/css" href="../HSR.Template.Exercises/documentStyle.css">
+		<script src="../HSR.Template.Exercises/solutions.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script src="./files/aufgabe1.js"></script>
+		<script src="./files/aufgabe2.js"></script>
+		<script src="./files/aufgabe3.js"></script>
+
+	</head>
+	<body>
+		<h1>
+			<a class="backlink" href="../index.html">⇦</a>
+			DOM & Events
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+
+
+		<h2>Theorie</h2>
+		<p>Machen Sie sich mit den grundlegenden JavaScript Events unter <a href="http://wiki.selfhtml.org/wiki/JavaScript/Event-Handler">http://wiki.selfhtml.org/wiki/JavaScript/Event-Handler</a> vertraut.</p>
+
+		<h2>Aufgabe A</h2>
+		<p class="description">Im head diese Dokumentes wurde aufgabe1.js eingebunden. Eigentlich sollte die Anzahl von h2 tags in diesem HTML gezählt werden und die Anzahl auf die Console ausgeben werden.
+			Überprüfen Sie ihre Console. Korrigieren Sie files/aufgabe1.js.</p>
+		<div class="solution">
+			<a href="solution/aufgabe1_Loesung.js" target="_blank">Lösung</a>
+		</div>
+
+		<h2>Aufgabe B</h2>
+		<p class="description">Nachfolgend ist ein Button definiert. Bei einem bestätigen soll "Hello World" auf der Console ausgeben werden. Lösen Sie dieses Problem auf 2 verschiedene Varianten: Inline-JavasScript und im File files/aufgabe2.js</p>
+		<p>Beide Lösungen sollten gleichzeitig aktiv sein. D.h. beim Bestätigen des Buttons wird 2 * "Hello World" ausgegeben.</p>
+		<input type="button" value="Hello World">
+		<div class="solution">
+			<a href="solution/hello_world.html" target="_blank">Lösung</a>
+		</div>
+
+		<h2>Aufgabe C</h2>
+		<p class="description">Nachfolgend ist ein Button definiert. Falls der Maus-Zeiger über dem Button liegt, soll dieser zu einem Text Feld werden und beim Verlassen wieder zu einem Button.</p>
+		<p>Der geänderte Text im Input soll im Button angezeigt werden.</p>
+		<input type="button" value="Change me!">
+		<div class="solution">
+			<a href="solution/button.html" target="_blank">Lösung</a>
+		</div>
+
+		<h2>Aufgabe D: Währungsumrechner</h2>
+		<p>Ihre Aufgabe ist ein Währungsrechner zu implementieren: </p>
+		<img src="images/exchange-rate.png">
+		<p>
+			<a href="solution/exchange-rate.html">Funktionierende Demo</a> - Lösung nicht anschauen :-)
+		</p>
+		<p>
+			Nutzen Sie folgende <a href="files/exchange-rate.html">Vorlage</a>.
+		</p>
+		<ul>
+			<li>Beim Ändern eines Werte soll bei allen andern Input-Felder der umgerechnete Wert angezeigt werden.</li>
+			<li>Es soll möglich sein, bei jedem Input-Feld den Wert zu ändern.</li>
+			<li>Lösen Sie das Problem nur mit JavaScript d.h. keine Änderungen am eigentlichem HTML.</li>
+			<li>Kein Copy & Paste</li>
+			<li>Lösen Sie diese Aufgabe nach der jQuery Übung nochmals mit jQuery</li>
+		</ul>
+		<div class="solution">
+			<p><a href="solution/exchange-rate.html">Eine mögliche Lösung</a></p>
+		</div>
+
+		<h2>Aufgabe E: Key Pressed Event Handling / Event Queue</h2>
+		<p>
+		Die Aufgabe ist hier gegeben <a href="files/keyPressedHandlingAufgabe.html">Key Pressed Event Handling Aufgabe</a>
+		</p>
+		<div class="solution">
+			<p><a href="solution/keyPressedHandlingLoesung.html">Key Pressed Event Handling Lösung</a></p>
+		</div>
+
+		<h2>Aufgabe F: Music JSON Rendering mit DOM Manipulation Schritt1</h2>
+		<p>
+		Die Aufgabe ist hier gegeben <a href="files/Music01InnerHTMLBasicExercise.html">
+			Music JSON Rendering mit DOM Manipulation Schritt1</a>
+		</p>
+		<div class="solution">
+			<p><a href="solution/Music01InnerHTMLBasicSolution.html">
+				Music JSON Rendering mit DOM Manipulation Schritt1 Lösung</a></p>
+		</div>
+
+		<h2>Aufgabe G: Music JSON Rendering mit DOM Manipulation Schritt 2</h2>
+		<p>
+		Die Aufgabe ist hier gegeben <a href="files/Music02AppendChildBasicExercise.html">
+			(Siehe ToDo im File) Music JSON Rendering mit DOM Manipulation Schritt 2</a>
+		</p>
+		<div class="solution">
+			<p><a href="solution/Music02AppendChildBasicSolution.html">
+				(Siehe ToDo im File) Music JSON Rendering mit DOM Manipulation Schritt 2 Lösung</a></p>
+		</div>
+
+		<h2>Aufgabe H: Music JSON Rendering mit DOM Manipulation Schritt 3</h2>
+		<p>
+		Die Aufgabe ist hier gegeben <a href="files/Music03InnerHTML+InlineEventsSolution.html">
+			(Siehe ToDo im File) Music JSON Rendering mit DOM Manipulation Schritt 3</a>
+		</p>
+		<div class="solution">
+			<p><a href="solution/Music02AppendChildBasicSolution.html">
+				Music JSON Rendering mit DOM Manipulation Schritt 3 Lösung</a></p>
+		</div>
+
+		<h2>Aufgabe I: Music JSON Rendering mit DOM Manipulation Schritt 4 (Event Bubbling)</h2>
+		<p>
+		Die Aufgabe ist hier gegeben <a href="files/Music04InnerHTML+BubblingEventsExercise.html">
+			(Siehe ToDo im File) Music JSON Rendering mit DOM Manipulation Schritt 4</a>
+		</p>
+		<div class="solution">
+			<p><a href="solution/Music04InnerHTML+BubblingEventsSolution.html">
+				Music JSON Rendering mit DOM Manipulation Schritt 4 Lösung</a></p>
+		</div>
+
+
+
+
+		<h2><img data-type="icon-difficult" alt="Icon difficult" src="../HSR.Template.Exercises/mind.svg" />Copy</h2>
+		<p class="description">Beim nachfolgenden P-Element sollte bei CTRL+C (copy) immer ein Text angehängt werden z.B. (C) www.hsr.ch.</p>
+		<p id="myText" >Dieser Text verhält sich anders, wenn man diesen kopiert!</p>
+		<div class="solution">
+			<p>Folgender  <a href="solution/copy.js">JavaScript </a> ist notwendig.</p>
+			<p><a href="solution/copy.html">Demo</a></p>
+		</div>
+	</body>
+</html>

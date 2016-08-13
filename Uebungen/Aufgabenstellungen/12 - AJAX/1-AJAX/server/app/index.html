@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Clock</title>
+
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#time:empty+button > .icon {
+				display: none;
+			}
+			.icon.reload::before {
+				content: "↻";
+				margin-right: 0.5em;
+				display: inline-block;
+			}
+		</style>
+
+		<script src="libraries/jquery-1.12.3.min.js"></script>
+		<script src="loader.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				document.getElementById('buttonGetTime').addEventListener('click', function () {
+					getTime(
+						function (time) {
+							document.getElementById('time').innerHTML = time;
+						},
+						function () {
+							alert('Error on loading time');
+						}
+					);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Current time</h1>
+		<p id="time"></p>
+		<button id="buttonGetTime"><span class="icon reload"></span>Get Time</button>
+	</body>
+</html>

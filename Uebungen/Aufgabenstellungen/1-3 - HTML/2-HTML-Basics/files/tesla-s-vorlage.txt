@@ -1,0 +1,53 @@
+Wikipedia - The Free Encyclopedia
+
+Navigation
+	Main Page
+	Events
+	Donate to Wikipedia
+	About wikipedia
+
+Tesla S specifications
+Body and chassis
+	Class
+	Full-size Luxury
+	Body style
+	5-door liftback
+	Layout
+	Rear-motor, rear-wheel drive, Dual motor all-wheel drive ('D'-Versions)
+Powertrain
+	Electric motor
+	Front and rear motor combined output up to 762 bhp (568 kW), 687 ft·lb (931 N·m), Three-phase AC induction motor
+	Transmission
+	1-speed fixed gear (9.73:1)
+	Battery
+	40, 60, 70, 85 or 90 kWh lithium ion[4]
+
+Tesla Model S
+From Wikipedia, the free encyclopedia
+The Tesla Model S is a full-sized all-electric five-door, luxury liftback car, produced by Tesla Motors, and introduced in June 2012.[10] It scored a perfect 5.0 NHTSA automobile safety rating. The United States Environmental Protection Agency (EPA) official range for the 2012 Model S Performance model equipped with an 85 kWh battery pack is 265 miles (426 km), higher than any other electric car at the time.[11][12][13] EPA rates its energy consumption at 237.5 Wh per kilometer (38 kWh/100 mi) for a combined fuel economy of 89 miles per gallon gasoline equivalent (2.64 L/100 km or 107 mpg-imp).[11][14]
+
+History
+The Model S was styled by Franz von Holzhausen, who previously worked for Mazda North American Operations.[26] The car was codenamed WhiteStar during research and preliminary development.[1][2][3]
+In February 2008 it was reported that Tesla Motors was planning to offer a range-extended version of its Model S. This version would have included a gasoline engine to extend the driving range of the vehicle,[30] but it was removed in later revisions. At the GoingGreen conference in September 2008 Tesla's CEO, Elon Musk, announced that Tesla was developing only electric cars.[31]
+Production
+Tesla manufactures the Model S at the 5.4 million square foot[39] Tesla Factory in Fremont, California. For the European market, Tesla assembles and distributes from its European Distribution Center in Tilburg, the Netherlands.[40] Cars are built and tested in Fremont, California. The battery pack, the electric motor and parts are disassembled and shipped separately to Tilburg, where the cars are reassembled.[41] The center occupies a 203,000 sq ft (18,900 m2) industrial building that also serves as a workshop and spare parts warehouse. Tesla expects the Model S to "pay back" the energy that went into producing the car in fewer than 10,000 miles (16,000 km).[42]
+The first ten customers received their cars at the Fremont factory on June 22, 2012 at the official launch.[43] Production grew from 15–20 cars completed/week in August 2012[43] to about 1,000 cars per week in 2015.[44]
+
+Design
+The Model S exists in several versions, differing in energy capacity (battery size), power (motor size), and equipment.
+Powertrain
+The 2012 Tesla Model S Performance model has a three phase, four pole AC induction 416 hp (310 kW) and 443 ft·lb (600 N·m) rear-mounted electric motor with copper rotor.[48] The base model uses a 362 hp (270 kW) and 325 ft·lb (440 N·m) motor. The company claimed a drag coefficient of Cd=0.24,[49] lower than any car when released. Models of Mercedes-Benz CLA-Class (released later) appeared to surpass the Model S[4][50] however, independent measurement by Car And Driver in May 2014 bore out Tesla's claim by exactly confirming a drag coefficient of Cd=0.24, but in the same test, measured the Mercedes CLA at Cd=0.30, putting Mercedes' claim into question.[51]
+The rear axle has a traditional open differential. Models with dual motors also have an open differential on the front axles as well. The front and rear axles have no mechanical linkage – with dual motors the power distribution among them is controlled electronically.[52]
+Dual-motor all-wheel-drive versions
+On October 9, 2014, Tesla announced the introduction of All Wheel Drive (AWD) versions of the Model S's 60, 85, and P85 models, designated by a D at the end of the model number.[59][60][61]
+On April 8, 2015, Tesla introduced the Model S 70D as its new US$75,000 entry-level car, with all-wheel drive and an improved range of 240 miles (385 km). The 70D replaced the 60 and 60D in the Model S lineup, with the latter two models no longer being available for purchase. The P85 option was also dropped.[62][63]
+
+Elon Musk about Tesla S
+“Within two years you’ll be able to summon your car from across the country.”
+“Within two years you’ll be able to summon your car from across the country,” Musk said on Sunday in a teleconference with the media, adding that “I might be slightly optimistic on that.”
+He continued. “So, let’s say, if you’re in New York and your car is in Los Angeles, it will find its way to you,” he said, adding that your phone will communicate with the car and tell it where to find you.  And the car will automatically charge itself along the way, he added. Making a Tesla capable of doing that will require both new hardware and software. “You’ll need a lot of redundancy.  More cameras, more radars…and redundant electronics,” he said.  All of that redundancy will be necessary to make sure the car doesn’t fail, Musk said.
+
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+Wikimedia Foundation, Inc.
+149 New Montgomery Street, Floor 6, San Francisco, CA 94105, USA

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var exchangeRate = { /*ungefähre Werte!*/
+            "chf" : 1,
+            "eur" : 0.92,
+            "usd" : 1.04,
+            "cad" : 1.33,
+            "pen" : 3.40
+        };
+        window.addEventListener("load", function(){
+            var currencies = Array.prototype.slice.call(document.querySelectorAll("[data-currency]"));
+            // or: var currencies = Array.from(document.querySelectorAll("[data-currency]"));
+            // NOT WORKING: var currencies = document.querySelectorAll("[data-currency]");
+currencies.forEach(function(el) {
+    el.addEventListener("input",function(input){
+        var currentElement = this; // or input.target;
+        currencies.forEach(function(toChange){
+            if(toChange!=currentElement){
+                toChange.value = Math.round((currentElement.value / exchangeRate[currentElement.getAttribute("data-currency")] * exchangeRate[toChange.getAttribute("data-currency")])*1000) / 1000 ;
+            }
+        });
+    });
+});
+
+        });
+    </script>
+</head>
+
+<body>
+<p>CHF: <input data-currency="chf"/></p>
+<p>Euro: <input  data-currency="eur"/></p>
+<p>Dollar: <input  data-currency="usd"/></p>
+<p>Canadian $: <input  data-currency="cad"/></p>
+<p>Peruvian Nuevo Sol: <input  data-currency="pen"/></p>
+</body>
+</html>

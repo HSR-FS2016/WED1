@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.12.3.min.js"></script>
+    <!-- // Variante 1
+    <script>
+        $(function() {
+            $("#toChange").text("Wurde geändert");
+        } );
+    </script>
+    -->
+</head>
+<body>
+    <p class="description">Nachfolgend sollte mit jQuery ein Text gesetzt werden. Was läuft schief? Korrigieren Sie dieses Problem auf zwei verschiedene Arten direkt im HTML.</p>
+    <script>$("#toChange").text("Wurde geändert")</script>
+    <div id="toChange"><strong>Dieser Text sollte geändert werden.</strong></div>
+    <!--
+        Variante 2 - Script nach unten schieben
+        <script>$("#toChange").text("Wurde geändert")</script>
+    -->
+</body>
+</html>

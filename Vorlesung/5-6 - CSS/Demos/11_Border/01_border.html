@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body > *{
+            outline: 1px solid blue;
+            border: 1px solid red;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 10px;
+            width: 50%;
+
+            box-sizing: border-box;
+
+        }
+
+        input {
+            width: 4em;
+            height: 4em;
+        }
+
+        .a:hover{
+            border : 10px green dotted;
+        }
+
+        .b:hover{
+            outline : 10px blue dotted;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="a">Hallo</p>
+    <p class="a">Hallo</p>
+    <div class="a">Hallo</div>
+    <div class="a">Hallo</div>
+
+    <input class="a b" type="checkbox"/>
+
+    <p class="b">Hallo</p>
+    <p class="b">Hallo</p>
+    <div class="b">Hallo</div>
+    <div class="b">Hallo</div>
+</body>
+</html>

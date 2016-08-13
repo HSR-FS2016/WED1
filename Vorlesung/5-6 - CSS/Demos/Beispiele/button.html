@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            height: 10em;
+            width: 10em;
+            border: blue;
+            border-radius: 10em;
+            background: rgb(203,96,179); /* Old browsers */
+            background: radial-gradient(ellipse at center, rgba(203,96,179,1) 0%,rgba(193,70,161,1) 50%,rgba(168,0,119,1) 51%,rgba(219,54,164,1) 100%);
+        }
+
+
+        button:focus {
+            outline:0;
+            background: rgb(219,54,164); /* Old browsers */
+            background: radial-gradient(ellipse at center, rgba(219,54,164,1) 0%,rgba(168,0,119,1) 49%,rgba(193,70,161,1) 50%,rgba(203,96,179,1) 100%);
+        }
+
+        button:before{
+            content:"Click!";
+        }
+
+        button:focus:before{
+            content:"Clicked!";
+        }
+    </style>
+</head>
+
+<body>
+    <button></button>
+</body>
+</html>

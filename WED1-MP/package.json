@@ -1,0 +1,26 @@
+{
+  "name": "wed1-mp",
+  "version": "1.0.0",
+  "description": "WED1 Miniprojekt",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-csslint": "^0.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-w3cjs": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HSR-FS2016/WED1-MP.git"
+  },
+  "author": "Silvan Adrian, Fabian Binna, Pascal Kistler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HSR-FS2016/WED1-MP/issues"
+  },
+  "homepage": "https://github.com/HSR-FS2016/WED1-MP#readme"
+}

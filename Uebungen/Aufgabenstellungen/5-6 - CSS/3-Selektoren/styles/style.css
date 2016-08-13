@@ -1,0 +1,32 @@
+ol,p { margin: 0.5rem; }
+ol { padding: 0; }
+ol > li {
+    text-indent: 0;
+    list-style-position: inside;
+}
+ol > li:nth-child(2n) {
+    list-style-type: lower-roman;
+}
+li.prefixed:before {
+    content: "i";
+    background: cornflowerblue;
+    display: inline-block;
+    text-align: center;
+    border-radius: 1rem;
+    color: white;
+    border: 0.05rem solid steelblue;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.25rem;
+}
+li.newline { clear: left; }
+
+li[data-type="summary"] { color: "orangie"; }
+
+#hsrLogo {
+    float: left;
+    width: 4rem;
+    height: auto;
+    padding: 0 0.25rem;
+}

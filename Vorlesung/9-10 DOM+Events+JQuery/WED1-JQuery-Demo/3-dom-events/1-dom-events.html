@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WED1 JQuery Demo</title>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script>
+        jQuery(function($) {
+
+            $("body").click(function(event){
+                console.log("body - click " + event.target.nodeName);
+                event.preventDefault();
+            });
+
+            $("body").on("click", "a", function(event){
+                console.log("body with filter - click " + event.target.nodeName);
+                event.preventDefault();
+            });
+
+            $("a").click(function(event){
+                console.log("a - click " + event.target.nodeName);
+                event.preventDefault();
+            });
+
+            var menuData = [{title : "Start", url : "/" }, {title : "Shop", url : "/shop" }];
+
+            for( let item of menuData)
+            {
+                var link =  $( "<a/>", { text: item.title , href: item.url });
+                var btn =  $( "<button/>", { text: item.title});
+                $("header").append(link);
+                $("header").append(btn);
+            }
+        })
+    </script>
+</head>
+<body>
+    <header></header>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+}
+.ok {
+	color: seagreen;
+}
+.problematic {
+	color: orange;
+}
+.bad {
+	color: maroon;
+}
+.current {
+	font-weight: bold;
+	font-style: italic;
+}
+table {
+	background: silver;
+	border-collapse: collapse;
+}
+table td, table th {
+	padding: 0.5em;
+}
+table .ok {
+	background: seagreen; color: black;
+}
+table .problematic {
+	background: orange; color: black;
+}
+table .bad {
+	background: maroon; color: white;
+}
+a {
+	padding: 0.5em;
+	display: inline-block;
+}
+label {
+	display: block;
+}

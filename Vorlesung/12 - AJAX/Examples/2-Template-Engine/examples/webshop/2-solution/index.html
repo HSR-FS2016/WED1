@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sky Webshop [Solution]</title>
+
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+
+		<script src="../libraries/handlebars-v3.0.3.js"></script>
+		<script src="loader.js"></script>
+		<script id="product-template" type="text/x-handlebars-template">
+{{#each products}}
+<li>
+	<h3>{{name}}</h3>
+	<img src="../images/{{image}}" class="product-image" alt="{{name}}" />
+	<span class="price">
+		{{#if specialOffer}}
+			<span class="offer">sale</span>
+		{{/if}}
+		CHF {{price}}
+	</span>
+</li>
+{{/each}}
+		</script>
+	</head>
+	<body>
+		<h1>Sky Webshop</h1>
+		<h2>Products</h2>
+		<ul id="products"></ul>
+	</body>
+</html>

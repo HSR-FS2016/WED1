@@ -1,0 +1,16 @@
+{
+  "name": "Time-API",
+  "version": "1.0.0",
+  "description": "Provide an API for the current time",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "T. Blaser",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "url": "latest"
+  }
+}

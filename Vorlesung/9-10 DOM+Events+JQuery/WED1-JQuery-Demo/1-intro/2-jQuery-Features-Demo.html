@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WED1 JQuery Demo</title>
+    <script src="jquery-2.2.3.min.js"></script>
+    <style>
+        .cool{
+            color: orangered;
+        }
+    </style>
+    <script>
+        (function ($) {
+            $(function () {
+                console.log($("em"));
+            });
+        })(jQuery);
+
+        function hideEm1 () {
+            $("em").hide();
+        }
+        function hideEm2 () {
+            var emElmLst = document.querySelectorAll("em");
+            for (var i=0; i < emElmLst.length; i++){
+                emElmLst[i].hidden=true;
+            }
+        }
+
+        $("p").slideUp("slow").addClass("cool").slideDown("slow")
+        // $("em").text(function(i, origText) { return ("this is the text number "+(i+1))}) //advanced
+        // $("body").on("click", function(){$("em").toggle()});
+        // $("body").on("click", "input", function(){$("em").toggleClass("cool")});
+        // $(".demoBtn").on("mouseenter mouseleave", function(){$("em").toggle()});
+        /*
+        $( ".demoBtn" ).on({
+            mouseenter: function() {
+                console.log( "hovered over a button" );
+            },
+            mouseleave: function() {
+                console.log( "mouse left a button" );
+            },
+            click: function() {
+                console.log( "clicked on a button" );
+            }
+        });
+        */
+    </script>
+</head>
+<body>
+<h1>JQuery Demo</h1>
+the text directly in body before the emphasized text  <em>the first emphasized text</em>
+the text directly in body after the emphasized text
+<p id="p1">the text in p before the emphasized text <em>the second emphasized text</em>
+    the text in p before the emphasized text</p>
+<input class="demoBtn" type="button" value="DemoButton1">
+<button class="demoBtn">DemoButton1</button>
+
+</body>
+</html>

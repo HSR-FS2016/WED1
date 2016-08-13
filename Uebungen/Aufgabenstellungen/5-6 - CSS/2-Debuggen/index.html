@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>WED1 - CSS Übung: Debuggen</title>
+		<link rel="icon" href="../HSR.Template.Exercises/icon-document.png" type="image/png">
+
+		<link rel="stylesheet" type="text/css" href="../HSR.Template.Exercises/documentStyle.css">
+
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+		<script src="../HSR.Template.Exercises/solutions.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<style>
+			.solutionBox { width: 100%; height: 5em; }
+			.marked { background: lightgreen; }
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a class="backlink" href="../index.html">⇦</a>
+			WED1 - CSS Debuggen
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+
+		<h2>Styles Debuggen</h2>
+		<p>Beantworten Sie folgende Fragen:</p>
+		<img id="hsrLogo" src="images\hsr-logo.png"/>
+		<ol>
+			<li>Welche Farbe wurde für den Hintergrund der Überschrift dieses Dokumentes gesetzt? (h1)
+				<div class="solution">
+					<p><strong>#0060A0</strong> oder <strong>rgb(0, 96, 160)</strong>
+				</div>
+			</li>
+
+			<li>Wie werden die abwechselnden Aufzählungszeichen der Listenpunkte erzeugt?
+				<div class="solution">
+					<p><code>ol > li:nth-child(2n)</code> Selektiert jedes zweite
+						Listenpunktelement
+					</p>
+				</div>
+			</li>
+			<li class="newline">
+				Welches Property ist dafür verantwortlich das dieser Text unter dem Bild steht?
+				<div class="solution">
+					<p>Das Herumfliessen wird durch das <code>clear</code> beendet.
+						Somit fliessen dieses und alle folgenden Element nicht um das Element
+						herum sondern beginnen erst danach.
+					</p>
+				</div>
+			</li>
+			<li>
+				<img data-type="icon-difficult" alt="Icon difficult" src="../HSR.Template.Exercises/mind.svg" />Wie wurde die Nummerierung der Überschriften zweiter Stufe (h2) realisiert?
+				<div class="solution">
+					Für die Anzeige der Nummerierung wird die
+					CSS-Counter Funktion benutzt. Diese erlaubt das definieren eines
+					Counters, der inkrementiert und resetet werden kann. Reset-Punkt des
+					Counters: Bei Überschriften zweiter Stufe muss dies z.B. jedes Mal
+					geschehen, wenn eine Überschrift erster Stufe erfolgte.
+<pre class="prettyprint"><code class="language-css"><!--
+-->body {
+	counter-reset: {countername}; // setzt den Counter zurück
+}
+h2::before {
+	counter-increment: {countername}; // erhöht den Counter
+	content: counter({countername}); // gibt den Wert des counters aus.
+}
+</code></pre>
+
+					Der Wert des Counters wird mittels ::before als Pseudoelement vorne an
+					den Titel angehängt.
+
+
+
+				</div>
+			</li>
+		</ol>
+
+
+
+		<h2>Styles im Debugger ändern</h2>
+		<ol>
+			<li>Ergänzen Sie mittels Developer Tools die Styles, sodass (nur) dieser Listenpunkt fett dargestellt wird.
+				<div class="solution">
+					<p>Den Element Style im Debugger ändern. z.B. Chrome:</p>
+					<img src="images/inline.png" alt="Inline solution">
+					<p>Alternative: Style Attribute auf dem HTML Tag hinzufügen.</p>
+				</div>
+
+			</li>
+			<li data-type="summary">Dieser Listenpunkt sollte orange dargestellt werden. Beheben Sie das Problem.</li>
+			<div class="solution">
+				<p>Style wurde falsch definiert. Korrekt wäre orange (ohne "")</p>
+				<img src="images/orange.png" alt="Orange problem">
+			</div>
+		</ol>
+	</body>
+</html>

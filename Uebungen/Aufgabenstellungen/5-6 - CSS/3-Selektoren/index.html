@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>WED1 - CSS Übung: Selektoren</title>
+		<link rel="icon" href="../HSR.Template.Exercises/icon-document.png" type="image/png">
+
+		<link rel="stylesheet" type="text/css" href="../HSR.Template.Exercises/documentStyle.css">
+
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+		<script src="../HSR.Template.Exercises/solutions.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<style>
+			.solutionBox { width: 100%; height: 5em; }
+			.marked { background: lightgreen; }
+
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a class="backlink" href="../index.html">⇦</a>
+			WED1 - CSS Selektoren
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+
+		<h2>Theorie Grundlagen</h2>
+		<p><strong>Beantworten Sie die Fragen und machen Sie je ein Beispiel.</strong></p>
+
+		<ol>
+			<li>Wie werden folgende Selektoren definiert?</li>
+			<ul>
+				<li>ID-Selektor</li>
+				<li>Typ-Selektor</li>
+				<li>Universal-Selektor</li>
+				<li>Attribute-Selektor</li>
+				<li>Klassen-Selektor</li>
+			</ul>
+			<li>
+				Was ist der Unterschied zwischen dem Selektor <code>h1 > div</code> und <code>h1 div</code> und welcher ist weshalb zu bevorzugen?
+			</li>
+			<div class="solution">
+				<ul>
+					<li>#myid</li>
+					<li>div</li>
+					<li>*</li>
+					<li>[href]</li>
+					<li>.alert</li>
+
+				</ul>
+				<p>Mit ">" wird nur direkte Nachfahren selektiert. Ohne ">" werden alle Nachfahren selektiert.</p>
+				<p><code>h1 > div</code> ist <code>h1 div</code> vorzuziehen. Grund: Performance</p>
+
+
+			</div>
+		</ol>
+
+		<h2>Table Stylen</h2>
+		<p>Stylen Sie die Table in der <a href="files/table.html">Vorlage</a>. Nutzen Sie ausschliesslich CSS um die Tabelle wie folgt zu Stylen:</p>
+		<p>Ändern Sie die Hintergrundfarbe im Hover-State.</p>
+		<p>Vergessen Sie das Warn-Zeichen nicht. Am HTML dürfen keine Anpassungen vorgenommen werden.
+		</p>
+		<img src="images/table.png" style="width: 250px"/>
+
+		<div class="solution">
+			<a href="solution/table.html">Lösung</a>
+		</div>
+
+		<h2>List Stylen</h2>
+		<p>Lesen Sie folgendes Kapitel von <a href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Listenformatierung/list-style">List-Style</a></p>
+		<ul>
+			<li>Wie kann bei einer Liste das Aufzählungszeichen geändert werden?</li>
+			<li>Was für Aufzählungszeichen sind möglich?</li>
+			<li>Wie kann man ein Bild als Aufzählungszeichen verwenden werden?</li>
+			<ul>
+				<li>Versuchen Sie eines einzubinden!</li>
+				<li>Gab es Probleme?</li>
+				<li>Weshalb ist das Aufzählungszeichen bei der nested Liste anders als bei der äusseren? Nutzen Sie die Developer Tools.</li>
+			</ul>
+			<li>Was ist der Unterschied zwischen <code>list-style-position: outside</code> und <code>list-style-position: inside</code>?
+
+			</li>
+		</ul>
+		<div class="solution">
+			Kontrollieren Sie ihre Antworten mit dem <a href="https://wiki.selfhtml.org/wiki/CSS/Eigenschaften/Listenformatierung/list-style">Wiki</a>.
+		</div>
+
+		<h2>Selektoren Rätsel</h2>
+		<p>Definieren Sie für folgende Problemstellungen einen geeigneten Selektor</p>
+		<p>Tipp: Definieren Sie auch ein HTML um die Selektoren zu testen</p>
+		<ul>
+			<li>
+				Alle h1 sollen eine rote Schriftfarbe besitzen.
+			</li>
+			<li>
+				Der erste Paragraph nach einem h1 soll kursive geschrieben sein. Alle andern nicht.
+			</li>
+			<li>
+				Jedes zweite List-Element soll eine blaue Schriftfarbe besitzen.
+			</li>
+			<li>
+				List Elemente deren Index durch 3 aber nicht durch 2 teilbar ist, sollen in roter Farbe dargestellt werden.
+
+			</li>
+			<li>
+				Alle h1, die nicht direkt im body tag liegen, sollen eine kleinere Schriftgrösse besitzen.
+			</li>
+			<li>
+				Alle links ohne "href" Attribute sollen durchgestrichen dargestellt	werden.
+			</li>
+			<li>
+				<strong>Stellen Sie sich eigene Aufgaben um sich mit den Selektoren vertraut zu machen. </strong>
+			</li>
+		</ul>
+
+		<div class="solution">
+			<a href="solution/selectors.html">Mögliche Lösung</a>
+		</div>
+
+	</body>
+</html>

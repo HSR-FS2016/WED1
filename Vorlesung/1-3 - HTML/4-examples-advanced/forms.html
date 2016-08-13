@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Forms</title>
+		<style>
+			* { box-sizing: border-box; }
+			body { font-family: Ubuntu, Arial, Helvetica, sans-serif; }
+			label { width: 10em; display: inline-block; text-align: right; }
+			form > label, fieldset > label { display: block; text-align: left; width: 100%; }
+			input, textarea { font-size: inherit; font-family: monospace; }
+			[type="submit"] { margin-left: 8em; }
+			textarea, input:not([type="radio"]):not([type="checkbox"]) { width: 20em;}
+			textarea { height: 3em; }
+			fieldset { border: 0.05em solid gray; }
+		</style>
+	</head>
+	<body>
+		<form action="./sendMessage" method="post">
+			<div>
+				<label>Male
+					<input type="radio" name="gender" value="male" checked />
+				</label>
+				<label>Female
+					<input type="radio" name="gender" value="female" />
+				</label>
+			</div>
+			<div>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" minlength="5" maxlength="30" required />
+			</div>
+			<div>
+				<label for="phone">Phone</label>
+				<input type="tel" name="phone-number" id="phone" />
+			</div>
+			<div>
+				<label for="mail">Email</label>
+				<input type="email" name="e-mail" id="mail" required />
+			</div>
+			<div>
+				<label for="reply">Contact me by email</label>
+				<input type="checkbox" name="reply" id="reply" />
+			</div>
+			<div>
+				<label for="customer-number">Customer number</label>
+				<input type="text" name="customer-number" id="customer-number" placeholder="CH1234" pattern="([A-Z][A-Z])?[0-9]*" />
+			</div>
+			<div>
+				<label for="messageType">Type of message</label>
+				<select name="message-type" id="messageType" size="1">
+					<option value="feedback" selected>Feedback</option>
+					<option value="question">Question</option>
+				</select>
+			</div>
+			<div>
+				<label for="messageUrgency">Urgency of message</label>
+				<input type="range" name="urgency" id="messageUrgency" min="1" max="5" step="1" value="3" />
+			</div>
+			<div>
+				<label for="message">Message</label>
+				<textarea name="message" id="message" required></textarea>
+			</div>
+			<div>
+				<button type="submit">Send request</button>
+				<button type="reset">Reset form</button>
+			</div>
+		</form>
+
+		<form action="./sendMessage" method="post" style="margin-top: 2rem;">
+			<fieldset id="optionsFieldSet">
+				<legend>Options</legend>
+
+				<label>
+					<input type="checkbox" name="newsletter" id="newsletter" />
+					Receive newsletter
+				</label>
+				<label>
+					<input type="checkbox" name="replyEmail" id="replyEmail" />
+					Contact me by email
+				</label>
+			</fieldset>
+		</form>
+
+
+		<form action="./sendMessage" enctype="multipart/form-data" method="post" style="margin-top: 2rem;" id="moreFields">
+			<img src="./media/inputDateTimeLocal.png" alt="Input date time local" style="float: right; height: 7rem; margin-right: 10rem;" />
+			<div>
+				<label for="date">Date</label>
+				<input type="datetime-local" name="date" id="date" />
+			</div>
+			<div>
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age" min="0" max="120" />
+			</div>
+			<div>
+				<label for="images">Image</label>
+				<input type="file" name="images" id="images" accept="image/*" multiple />
+			</div>
+			<div>
+				<label for="colors">Color</label>
+				<input type="color" name="colors" id="colors" value="#ff0000" />
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" value="mypassword" />
+			</div>
+			<input type="hidden" name="hidden-values" value="checksum" />
+		</form>
+	</body>
+</html>

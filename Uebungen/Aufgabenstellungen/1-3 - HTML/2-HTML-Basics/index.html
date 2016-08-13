@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<title>WED1 Übung: HTML - 2 Basics</title>
+		<link rel="icon" href="../HSR.Template.Exercises/icon-document.png" type="image/png">
+
+		<link rel="stylesheet" type="text/css" href="../HSR.Template.Exercises/documentStyle.css">
+		<script src="../HSR.Template.Exercises/solutions.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		<style>
+			table {
+				max-width: 100%;
+			}
+			table input { width: 100%; }
+			table thead tr th:not(:first-child) { text-align: center; }
+			table thead, col.firstRow { background: silver; }
+			td:not(:empty) { background: lightblue; text-align: center; }
+			label > textarea { display: block; width: 100%; }
+		</style>
+	</head>
+	<body>
+		<h1>
+			<a class="backlink" href="../index.html">⇦</a>
+			WED1 - HTML <img src="../images/HTML5_Logo.svg" alt="HTML logo" style="height: 1em; width: auto;" /> Übung 2: Basics
+			<button id="showSolutions">Lösungen anzeigen/ausblenden</button>
+		</h1>
+
+
+		<h2>HTML Doctypes</h2>
+		<p>Arbeiten Sie die folgenden Kapitel bezüglich der HTML Doctypes durch:</p>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode" target="_blank">developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode</a></li>
+			<li><a href="http://de.selfhtml.org/html/xhtml/unterschiede.htm#dokumenttyp" target="_blank">de.selfhtml.org/html/xhtml/unterschiede.htm#dokumenttyp</a></li>
+			<li><a href="https://hsivonen.fi/doctype/#sniffing" target="_blank">https://hsivonen.fi/doctype/#sniffing</a></li>
+		</ul>
+		<ol style="list-style-type: lower-alpha;">
+			<li>
+				Finden Sie mindestens einen Tag aus der Vorlage <a href="./files/docType.html" target="_blank">docType</a>,
+				welcher im Quirks Mode (d.h. ohne <code>&lt;!DOCTYPE html&gt;</code>) bei Mozilla basierten Browsern (siehe <a href="https://developer.mozilla.org/en-US/docs/Mozilla_Quirks_Mode_Behavior" target="_blank">developer.mozilla.org/en-US/docs/Mozilla_Quirks_Mode_Behavior</a>) speziell interpretiert wird.
+
+				<div class="solution">
+					<p>Add padding if the very first node in an LI is another UL or OL ...</p>
+				</div>
+			</li>
+			<li>
+				Welche Komplikationen können mit Internet Explorer auftreten,
+				falls Sie bei den Übungen die META-Anweisung X-UA-Compatible nicht verwenden und direkt auf einem Netzlaufwerk arbeiten?
+				Personen ohne Internet Explorer führen die Übung bitte zusammen mit einem Kollegen oder einer Kollegin mit einem Windows-Rechner aus.
+				(siehe <a href="https://hsivonen.fi/doctype/#ie8" target="_blank">hsivonen.fi/doctype/#ie8</a>)
+
+				<div class="solution">
+					<p>Internet Explorer beachtet nicht nur den Doctype, sondern auch die Umgebung des auszuführenden Files.
+						So wird bei IE11 der IE7 Standard Mode aktiviert, falls die Seite im Intranet gehostet wird
+						(siehe Kontextmenü &rarr; "Properties" und Einstellungen ("Zahnrad") &rarr; "Compatibility View
+						settings").
+					</p>
+					<img src="./images/ie1.jpg" alt="IE compatibility view" />
+					<p>In den Entwicklertools im Tab "Emulation" sehen Sie den aktuellen Document-Mode.</p>
+					<img src="./images/ie2.jpg" alt="IE compatibility view" />
+					<img src="./images/ie3.jpg" alt="IE compatibility view" />
+					<p>Mit <code>document.documentMode</code> können sie sich auch auf der
+					Konsole den aktuellen Document-Mode ausgeben lassen. "7" bedeutet Internet Explorer 7.</p>
+					<p><strong>Beachten Sie:</strong> Mit Dateien vom Skripteserver können Sie das gewünschte
+						Verhalten nicht erzeugen.</p>
+				</div>
+			</li>
+		</ol>
+
+
+		<h2>Dokument Auszeichnung</h2>
+		<ol style="list-style-type: lower-alpha;">
+			<li>Zeichnen Sie das folgende Dokument <a href="./files/tesla-s-vorlage.txt" target="_blank">files/tesla-s-vorlage.txt</a> mit HTML aus:
+				<ul>
+					<li>Tesla Model S Artikel: <a href="./files/tesla-model-s.pdf" target="_blank">files/tesla-s-model-s.pdf</a></li>
+					<li>Verwenden Sie nebst den häufig gebräuchlichen Elementen wie section, nav, aside, heading
+						oder paragraph auch small, time, address, i, abbr, cite, q, blockquote etc. Vergessen Sie bei
+						time nicht, den Zeitstempel mittels "datetime"-Attribut anzugeben. Schauen Sie das zu
+						verwendende Format im Wiki nach.</li>
+					<li>Benutzen Sie den W3C Validator um die Korrektheit ihres Dokumentes zu überprüfen <a href="https://validator.w3.org/#validate_by_input" target="_blank">https://validator.w3.org/#validate_by_input</a>.</li>
+					<li><strong>Hinweis</strong>: 'Specification' wurde nur zur besseren Erkennbarkeit eingerahmt. Da dies nur die Darstellung betrifft, können Sie den Rahmen und die Breite von 20% für ihre Auszeichnung ignorieren.</li>
+					<li>Für die Specifications können Sie eine Definition List verwenden. Machen Sie sich damit vertraut: <a href="https://wiki.selfhtml.org/wiki/HTML/Textstrukturierung/dl" target="_blank">https://wiki.selfhtml.org/wiki/HTML/Textstrukturierung/dl</a>.</li>
+				</ul>
+			</li>
+
+			<li>Fügen Sie folgende Meta Informationen ins Dokument ein: publisher, application-name, description.</li>
+		</ol>
+
+		<div class="solution">
+			<a href="./solution/tesla-s-solution.html" target="_blank">solution/tesla-s-solution.html</a>
+		</div>
+
+
+		<h2>Content-Modelle in HTML5</h2>
+		<p>In dieser Aufgabe sollen Sie die W3C-Spezifikation lesen lernen und das Content Model verstehen.</p>
+		<ol style="list-style-type: lower-alpha;">
+			<li>
+				<p>Finden sie mit Hilfe des Content Models und der verlinkten W3C Element-Spezifikation heraus, welche Elemente sich ineinander verschachteln lassen.</p>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Allowed content<br />(content model)</th>
+							<th>Allowed context<br />(parent)</th>
+							<th>Darf in sich selbst verschachtelt werden</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-body-element" target="_blank">body</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element" target="_blank">section</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element" target="_blank">style</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements" target="_blank">h3</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-header-element" target="_blank">header</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-div-element" target="_blank">div</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-select-element" target="_blank">select</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-object-element" target="_blank">object</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-time-element" target="_blank">time</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-video-element" target="_blank">video</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-p-element" target="_blank">p</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+						<tr>
+							<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-a-element" target="_blank">a</a></th>
+							<td><input type="text" /></td>
+							<td><input type="text" /></td>
+							<td><input type="checkbox" /></td>
+						</tr>
+					</tbody>
+				</table>
+				<p><a href="#" onclick="window.print();return false;">Lösung speichern</a></p>
+
+				<div class="solution">
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Allowed content<br />(content model)</th>
+								<th>Allowed context<br />(parent)</th>
+								<th>Darf in sich selbst verschachtelt werden</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-body-element" target="_blank">body</a></th>
+								<td>Flow</td>
+								<td>2. Kind von "html"</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-section-element" target="_blank">section</a></th>
+								<td>Flow</td>
+								<td>Flow</td>
+								<td>✓</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element" target="_blank">style</a></th>
+								<td>-</td>
+								<td>Meta/Flow</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements" target="_blank">h3</a></th>
+								<td>Phrasing</td>
+								<td>"hgroup"/Flow</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#the-header-element" target="_blank">header</a></th>
+								<td>Flow, !"header", !"footer", !"main"</td>
+								<td>Flow</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-div-element" target="_blank">div</a></th>
+								<td>Flow</td>
+								<td>Flow</td>
+								<td>✓</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#the-select-element" target="_blank">select</a></th>
+								<td>"option", "opt.group"</td>
+								<td>Phrasing</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-object-element" target="_blank">object</a></th>
+								<td>"param", Flow</td>
+								<td>Embeded</td>
+								<td>✓</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-time-element" target="_blank">time</a></th>
+								<td>Phrasing, !"time"</td>
+								<td>Phrasing</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/the-iframe-element.html#the-video-element" target="_blank">video</a></th>
+								<td>"track", Flow, !video, !audio</td>
+								<td>Embeded</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/grouping-content.html#the-p-element" target="_blank">p</a></th>
+								<td>Phrasing</td>
+								<td>Flow</td>
+								<td>x</td>
+							</tr>
+							<tr>
+								<th><a href="https://www.w3.org/TR/2011/WD-html5-20110525/text-level-semantics.html#the-a-element" target="_blank">a</a></th>
+								<td>Flow, !Interactiv</td>
+								<td>Interactiv</td>
+								<td>x</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+		</ol>
+		<img src="./images/content-model.jpg" style="height: 20em;" alt="Content model" />
+		<p>
+			Beschreibung zum Content-Model:
+			<a href="http://www.stefan-muenz.de/HTML5-Handbuch/Textstrukturierung/Content-Modelle" target="_blank">www.stefan-muenz.de/HTML5-Handbuch/Textstrukturierung/Content-Modelle</a>.
+			<br />
+			W3C Elementbeschreibungen Übersicht:
+			<a href="https://www.w3.org/TR/2011/WD-html5-20110525/spec.html#auto-toc-4" target="_blank">
+				www.w3.org/TR/2011/WD-html5-20110525/spec.html#auto-toc-4
+			</a>
+		</p>
+		<p><strong>Hinweis</strong>: WebStorm kennt das Content Model. Sie können zum Überprüfen, ob Sie die Spezifikation richtig gelesen haben, ein einfaches Beispiel in WebStorm erstellen und WebStorm wird Ihnen die Struktur validieren.</p>
+
+
+		<h2>Can I Use?</h2>
+		<p>Ermitteln Sie mittels <a href="http://caniuse.com/" target="_blank">caniuse.com</a>, ob die folgenden Tags/Technologien in Firefox (FF), Chrome (GC), Internet Explorer/Edge (IE), Safari (AS) und Android Browser (AB) funktionieren. Beziehen Sie sich dabei jeweils auf die zwei neusten Browserversionen.</p>
+		<dl>
+			<dt>tag <i>section</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+
+			<dt>tag <i>main</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+
+			<dt>tag <i>video</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+
+			<dt>video format <i>webm</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+
+			<dt>attribute <i>prefetch</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+
+			<dt>tag <i>picture</i></dt>
+			<dd><label><input type="checkbox" />Von Allen unterstützt</label></dd>
+			<dd><label>Nur unterstützt von:<textarea></textarea></label></dd>
+			<dd><label>Bemerkungen:<textarea></textarea></label></dd>
+		</dl>
+		<p><a href="#" onclick="window.print();return false;">Lösung speichern</a></p>
+
+		<div class="solution">
+
+			<dl>
+				<dt>tag <i>section</i></dt>
+				<dd><label><input type="checkbox" checked />Von Allen unterstützt</label></dd>
+
+				<dt>tag <i>main</i></dt>
+				<dd><label><input type="checkbox" checked />Von Allen unterstützt</label></dd>
+				<dd>Bemerkungen: IE erst seit Edge</dd>
+
+				<dt>tag <i>video</i></dt>
+				<dd><label><input type="checkbox" checked />Von Allen unterstützt</label></dd>
+
+				<dt>video format <i>webm</i></dt>
+				<dd>Nur unterstützt von FF, GC, AB</dd>
+
+				<dt>attribute <i>prefetch</i></dt>
+				<dd>Nur unterstützt von IE, FF, GC, AB</dd>
+
+				<dt>tag <i>picture</i></dt>
+				<dd>Nur unterstützt von IE, FF, GC</dd>
+				<dd>Bemerkungen: IE seit Edge, AB ab v47, Safari ab v9.1</dd>
+			</dl>
+		</div>
+	</body>
+</html>

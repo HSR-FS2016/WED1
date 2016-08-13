@@ -1,0 +1,23 @@
+h2{
+    border-bottom: 1px rgb(170,170,170) solid;
+}
+
+pre {
+    border: 1px gray solid;
+    background: lightgray;
+}
+
+.edit{
+     font-size: 0.5em;
+     text-decoration: none;
+     color: #0b0080;
+     font-family: "sans-serif";
+}
+
+.edit:after{
+    content: " ]"
+}
+
+.edit:before{
+    content: "[ "
+}

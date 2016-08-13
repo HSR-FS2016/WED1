@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Timetable [initial]</title>
+
+		<link rel="stylesheet" type="text/css" href="../styles/style.css">
+
+		<script src="../libraries/jquery-1.12.3.min.js"></script>
+		<script src="suggestion-loader.js"></script>
+	</head>
+	<body>
+		<h1>Connections to Rapperswil</h1>
+
+		<datalist id="suggestions"></datalist>
+
+		<form>
+			<label>
+				From
+				<input type="text" id="from" name="from" list="suggestions" />
+			</label>
+			<label>
+				To
+				<input type="text" id="to" name="to" value="Rapperswil" readonly />
+			</label>
+			<button type="submit">Get connections</button>
+		</form>
+	</body>
+</html>

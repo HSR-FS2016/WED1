@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+
+        [data-tooltip]{
+            font-size: 2em;
+            position: relative;
+        }
+        [data-tooltip]:hover:after{
+             content:  attr(data-tooltip);
+             border: 1px gray solid;
+             background: yellow;
+             position: absolute;
+             top: 102%;
+             left: 101%;
+             padding: 10px;
+       }
+
+    </style>
+</head>
+<body>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+    <button data-tooltip="Do not click me!! Thanks!">Click me</button>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+    <p>Text</p>
+</body>
+</html>

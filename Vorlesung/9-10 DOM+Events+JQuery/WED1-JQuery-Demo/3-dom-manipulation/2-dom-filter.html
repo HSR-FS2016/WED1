@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WED1 JQuery Demo</title>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script>
+        jQuery(function($) {
+            var list = $("#item-list");
+            list.children().text("Hello World");
+            list.find(".done").hide();
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <ul id="item-list">
+        <li class="done">Item 1</li>
+        <li class="done">Item 2</li>
+        <li class="">Item 3</li>
+        <li class="">Item 4</li>
+    </ul>
+</body>
+</html>

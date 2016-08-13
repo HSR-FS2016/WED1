@@ -1,0 +1,15 @@
+{
+  "name": "Ponderal-Index-API",
+  "version": "1.0.0",
+  "description": "Provide an API to calculate the ponderal index",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "T. Blaser",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest"
+  }
+}

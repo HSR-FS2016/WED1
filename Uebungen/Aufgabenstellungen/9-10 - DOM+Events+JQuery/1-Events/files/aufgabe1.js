@@ -1,0 +1,1 @@
+console.log("Aufgabe 1:", "Anzahl von h2 im html: " + document.querySelectorAll("h2").length);

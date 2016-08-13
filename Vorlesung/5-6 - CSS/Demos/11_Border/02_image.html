@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .message{
+            border: 1px dashed #000000;
+            background: orange;
+            position: fixed;
+            padding: 10px;
+        }
+        #msg1{
+            border-radius: 0 0 100% 100%;
+            border: 1px dashed #000000;
+            right: 10px;
+            top: 0;
+        }
+
+        #msg2{
+             border-radius: 0 0 200px 0;
+             border: 1px dashed #000000;
+             left: 0;
+             top: 0;
+         }
+
+
+        #msg3{
+            border: 10px double #000000;
+            border-radius: 100%;
+            left: 20%;
+            height: 50px;
+            width: 50px;
+            box-sizing: border-box;
+            padding: 0;
+            text-align: center;
+        }
+
+        #msg3 > span
+        {
+            line-height: 30px;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        #menu{
+            background:  deepskyblue;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="msg2" class="message">
+    <span>2</span>
+</div>
+
+<div id="msg1" class="message">
+    <span>2</span>
+</div>
+
+<div id="msg3" class="message">
+    <span>2</span>
+</div>
+
+<div id="menu">
+   Menu
+</div>
+
+</body>
+</html>

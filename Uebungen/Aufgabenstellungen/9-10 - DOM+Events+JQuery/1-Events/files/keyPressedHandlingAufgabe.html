@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyPress Event-Handling Aufgabe</title>
+</head>
+<body>
+
+<h1>KeyPress Event Handling Aufgabe</h1>
+
+Die Buchstaben im Textfeld sollen stets als Uppercase dargestellt werden. Aktuell funktioniert dies nicht korrekt.
+Lösen Sie das Problem auf zwei Arten (es ist ok wenn nur das Anfügen von Zeichen funktioniert: Cursor in der
+Mitte des Strings muss nicht funktionieren)
+<ul>
+    <li>Indem Sie einen anderen Event-Handler nutzen</li>
+    <li>Indem Sie die mittels Timeout einen neuen Event-Handler in der Event-Queue platzieren. Erst bei dessen
+        Ausführung wird der String auf Uppercase geändert</li>
+</ul>
+
+<input id='inpt' type="text">
+<script>
+    document.getElementById('inpt').onkeypress = function(event) {
+        this.value = this.value.toUpperCase()
+    }
+</script>
+
+</body>
+</html>

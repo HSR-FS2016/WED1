@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM API Demo</title>
+    <script>
+        function replaceTheButton2Text() {
+            document.getElementById('button1').childNodes[0].nodeValue = text1.value;
+        }
+        function addNewPElement() {
+                var p1 = document.createElement('p');
+                p1.innerHTML = document.getElementById("text1").value;
+                var emptyDiv = document.getElementById('emptyDiv');
+                emptyDiv.appendChild(p1);
+        }
+        function setPNodeLists () {
+            lifeInputsNodeList = document.getElementsByTagName('p');
+            notLifeListOfInputs = document.querySelectorAll("p");
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>DOM API Demo</h1>
+text in body <em>with emphasized text</em> and more
+<p id="p1">paragraph <em>with emphasized text</em> and more</p>
+
+<input id="text1" type="text" value="some Text"/>
+<button id="button1" value="valueText">Click Me</button>
+<input id="button2" type="button" value="Button 2"/>
+<div id="emptyDiv"></div>
+
+</body>
+</html>
+
